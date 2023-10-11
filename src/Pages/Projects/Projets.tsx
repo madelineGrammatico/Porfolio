@@ -8,6 +8,7 @@ import {
 } from "../../app/projectsSlice/projectsSlice";
 import { addFilter, initilizeFilter, removeFilter } from "../../app/filtersSlice/filtersSlice";
 import { useEffect } from "react";
+import { Project } from "../../components/Project/Project";
 
 const traduction = {
     pageTitle: {
@@ -75,20 +76,7 @@ export function Projects() {
             <button onClick={()=> resetProjects()}>reset</button>
 
             { projects.map((project, index) => {
-                return <div key={ project.id + "project" + index }>
-                    <h2>{ project.name }</h2>
-                    <p>{ project.descriptions[language]}</p>
-                    <ol>
-                        { project.skills[language].map((skill, index)=> {
-                            return <li key={ project.id + "skill" + index }>{ skill }</li>
-                        })}
-                    </ol>
-                    <ul>
-                        { project.technos.map((techno, index) => {
-                            return <li key={project.id + "techno" + index}>{ techno }</li>
-                        })}
-                    </ul>
-                </div>
+                return <Project project={project} key={index} ></Project>
             })}
 
         </main>

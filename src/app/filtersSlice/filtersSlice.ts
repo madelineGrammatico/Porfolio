@@ -17,12 +17,8 @@ export const filtersSlice = createSlice({
        addFilter:(state: Draft<FiltersType>, action: PayloadAction<string>) => {
             (state.filters.includes(action.payload))? 
                 null : state.filters.push(action.payload)
-            // console.log(action.payload)
-            // state.filters.push(action.payload)
-            // console.log(state.filters)
        },
        removeFilter:(state: Draft<FiltersType>, action: PayloadAction<string>) => {
-        
         const index = state.filters.indexOf(action.payload)
         state.filters.splice(index, 1)
     },

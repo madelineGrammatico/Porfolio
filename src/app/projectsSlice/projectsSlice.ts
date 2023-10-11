@@ -32,6 +32,7 @@ const initialState: ProjectsType= {
         {
             name: "Portfolio",
             id: 10,
+            favorite: true,
             technos: [
                 "React",
                 "TypeScript",
@@ -60,6 +61,7 @@ const initialState: ProjectsType= {
         {
             name: "P14_RHnet_React",
             id: 9,
+            favorite: true,
             technos: [
                 "React",
                 "TypeScript",
@@ -91,6 +93,7 @@ const initialState: ProjectsType= {
         {
             name: "mg-p14-modal",
             id: 8,
+            favorite: true,
             technos: [
                 "React",
                 "React Router",
@@ -121,6 +124,7 @@ const initialState: ProjectsType= {
         {
             name: "ArgentBank",
             id: 7,
+            favorite: true,
             technos: [
                 "React",
                 "TypeScript",
