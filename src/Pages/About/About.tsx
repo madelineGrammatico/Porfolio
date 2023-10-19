@@ -11,12 +11,11 @@ const traduction = {
     }
 }
 export function About() {
-    const language = useSelector((state: RootState) => state.languageSlice.language)
-    return (
-      <main>
-        <Nav/>
-          <h1>{traduction.pageTitle[language]}</h1>
-      </main>
-    )
-  }
-  
+  const language = useSelector((state: RootState) => state.languageSlice.language)
+  return (
+    <main>
+      <Nav/>
+        <h1>{traduction.pageTitle[language]}</h1>
+    </main>
+  )
+}

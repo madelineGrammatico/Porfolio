@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { RootState } from "../../app/store";
 import { toggleLanguage } from "../../app/languageSlice/languageSlice";
+import styled from "styled-components"
 
 const traduction = {
   home: {
@@ -18,6 +19,16 @@ const traduction = {
   }
 }
 
+const Menu = styled.nav`
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+`
+const LinksContainer = styled.nav`
+display: flex;
+gap: 1rem;
+`
 export function Nav() {
   const language = useSelector((state: RootState) => state.languageSlice.language)
   const dispatch = useDispatch()
@@ -25,12 +36,16 @@ export function Nav() {
   const HandlerToogleLanguage = () => {
     dispatch(toggleLanguage())
   }
+ 
   return (
-    <nav>
+    <Menu>
+      <LinksContainer>
         <Link to="/">{traduction.home[language]}</Link>
         <Link to="/projects">{traduction.projects[language]}</Link>
         <Link to="/about">{traduction.about[language]}</Link>
-        <button onClick={HandlerToogleLanguage}>{(language === "EN")? "FR" : "EN"}</button>
-    </nav>
+      </LinksContainer>
+        
+        <button onClick={HandlerToogleLanguage}>{(language === "EN")? "EN" : "FR"}</button>
+    </Menu>
   )
 }
