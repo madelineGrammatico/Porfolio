@@ -38,11 +38,12 @@ const initialState: ProjectsType= {
                 "TypeScript",
                 "Redux Toolkit",
                 "React Router",
+                "Styled Composant",
                 "Vite",
             ],
             descriptions: {
                 EN: "Front-End developer portfolio with technology search functionality.",
-                FR: "Portfolio de développeuse Front-End avec une fonctionnalité de recherche par thechnologies.",
+                FR: "Portfolio de développeuse Front-End avec une fonctionnalité de recherche par technologies.",
             },
             skills: {
                 EN: [
@@ -67,7 +68,7 @@ const initialState: ProjectsType= {
                 "TypeScript",
                 "Redux Toolkit",
                 "React Router",
-                "React hook Form",
+                "React Hook Form",
                 "MaterialUI",
                 "CSS Modules",
                 "Vite",
