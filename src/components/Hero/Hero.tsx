@@ -2,18 +2,16 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../app/store";
 import styled from "styled-components"
 import colors from "../../color";
-import { Button } from "../Button/Button";
+import { ButtonLink } from "../../components/Button/ButtonLink";
 
 const HeroStyled = styled.section`
   background-color: ${colors.second};
-  /* background: linear-gradient(105deg, ${colors.third} 39%, ${colors.second} 39.2%); */
   color: white;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 5rem; */
 `
 const HeroProfile = styled.section`
   background-color: ${colors.third};
@@ -31,8 +29,6 @@ const HeroProfile = styled.section`
   
 `
 const HeroSecond = styled.div`
-  /* background-color: ${colors.second}; */
-  /* height: 100%; */
   flex-flow: wrap;
   display: flex;
   flex-direction: row;
@@ -81,8 +77,8 @@ export function Hero() {
       </HeroProfile>
       <HeroSecond>
         <p>{ traduction.heroIntroduction[language] }</p>
-        <Button>{ traduction.heroButton[language]}</Button>
-        <Button type="secondary">{ traduction.heroSecondButton[language]}</Button>
+        <ButtonLink type="primary" to="/About">{ traduction.heroButton[language]}</ButtonLink>
+        <ButtonLink type="secondary" to='/Projects'>{ traduction.heroSecondButton[language]}</ButtonLink>
       </HeroSecond>
     </HeroStyled>
   )

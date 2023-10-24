@@ -1,5 +1,6 @@
 import { RootState } from "../../app/store";
 import { Nav } from "../../components/Nav/Nav";
+import { Button } from "../../components/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { 
     // ProjectType, 
@@ -10,7 +11,6 @@ import { addFilter, initilizeFilter, removeFilter } from "../../app/filtersSlice
 import { useEffect } from "react";
 import { Project } from "../../components/Project/Project";
 import styled from "styled-components"
-import { ButtonLink } from "../../components/Button/Button";
 import colors from "../../color";
 
 const traduction = {
@@ -77,16 +77,7 @@ const ProjectsContainer = styled.section`
         padding:  0 4rem 2rem 4rem;
         color: ${colors.first};
     `
-    const ResetButton = styled(ButtonLink)`
-        color: ${colors.second};
-        background-color: ${colors.fourth};
-        border: solid 4px ${colors.second};
-        &:hover{
-            color:${colors.fourth};
-            background-color: white;
-            border: solid 4px white;
-        }
-    `
+   
     const HeaderProject = styled.header`
         display: flex;
         flex-direction: column;
@@ -153,7 +144,7 @@ export function Projects() {
                     }
                      
                 </FilterContainer>
-                <ResetButton onClick={()=> resetProjects()}>{traduction.resetButton[language]}</ResetButton>
+                <Button onClick={()=> resetProjects()} type="reset">{traduction.resetButton[language]}</Button>
             </HeaderProject>
            
             <ProjectsContainer>

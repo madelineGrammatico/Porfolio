@@ -4,6 +4,7 @@ import { Techno } from "../Techno/Techno";
 import colors from "../../color";
 import { useSelector } from "react-redux";
 import { RootState } from "../../app/store";
+import { ButtonLink } from "../Button/ButtonLink";
 const technosData = [
   "React",
   "TypeScript",
@@ -37,7 +38,7 @@ align-items: center;
 gap: 1.3rem;
 width: 100%;
 padding:  0 4rem;
-color: ${colors.first};
+color: ${colors.second};
 
 `
 const Container= styled.section`
@@ -47,12 +48,9 @@ justify-content: flex-start;
 align-items: start;
 padding: 6rem;
 gap: 2rem;
-`
-const LinkStyled = styled.button`
-padding: 1.2rem;
-color: white;
-background-color: ${colors.fourth}; 
-border-radius: 5px;
+background-color: #172429;
+background-color: #DDDDDD;
+background-color: #222222;
 
 `
 const CallToActionWrapper = styled.div`
@@ -77,7 +75,7 @@ export default function Technos() {
       </TechnosContainer>
       <CallToActionWrapper>
         
-        <LinkStyled>{traduction.buttonForFilters[language]}</LinkStyled>
+        <ButtonLink to="/Projects">{traduction.buttonForFilters[language]}</ButtonLink>
       </CallToActionWrapper>
       
     </Container>
