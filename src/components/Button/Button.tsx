@@ -2,6 +2,7 @@ import styled from "styled-components"
 import colors from "../../color"
 
 import buttonGlobal from "./buttonGlobal";
+import React from "react";
 
 const ButtonPrimary = styled.button`
     ${buttonGlobal};
@@ -17,11 +18,30 @@ const ButtonResetFilter = styled.button`
         background-color: white;
     }
 `
-export function Button({children, type, onClick }: { children: string, type?: "reset" | "primary", onClick?: () => void }) {
-    const buttonType = type ==="reset"? 
-        <ButtonResetFilter onClick={ onClick }>{children}</ButtonResetFilter>
-    : 
-        <ButtonPrimary onClick={ onClick }>{children}</ButtonPrimary>
-
+const FilterStyled = styled.button`
+    ${buttonGlobal};
+    background-color: ${colors.fourth};
+    border: 3px solid ${colors.fourth};
+    padding: 1rem;
+    border-radius: 2rem;
+    &:hover {
+        color:${colors.fourth};
+        background-color: white;
+        border-color: ${colors.fourth};
+    }
+`
+export function Button({children, type, onClick }: { children: string, type?: "reset" | "primary"| "filter", onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void }) {
+    let buttonType
+        switch(type) {
+            case "reset":
+                buttonType = <ButtonResetFilter onClick={ onClick }>{children}</ButtonResetFilter>
+            break
+            case "filter":
+                buttonType = <FilterStyled onClick={ onClick }>{children}</FilterStyled>
+            break
+            default:
+                buttonType = <ButtonPrimary onClick={ onClick }>{children}</ButtonPrimary>
+            break
+        }
     return (buttonType)
 }

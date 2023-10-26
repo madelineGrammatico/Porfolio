@@ -34,18 +34,18 @@ const ProjectsContainer = styled.section`
         padding: 6rem 10rem ;
         background-color: ${colors.third};
     `
-    const FilterStyled = styled.button`
-        color: white;
-        background-color: ${colors.fourth};
-        padding: 1rem;
-        border-radius: 2rem;
-        cursor: pointer;
-        &:hover {
-            color:${colors.fourth};
-            background-color: white;
-            border-color: ${colors.fourth};
-        }
-    `
+    // const FilterStyled = styled.button`
+    //     color: white;
+    //     background-color: ${colors.fourth};
+    //     padding: 1rem;
+    //     border-radius: 2rem;
+    //     cursor: pointer;
+    //     &:hover {
+    //         color:${colors.fourth};
+    //         background-color: white;
+    //         border-color: ${colors.fourth};
+    //     }
+    // `
     const TitleFilter = styled.h1`
         display: flex;
         flex-flow: row wrap;
@@ -139,7 +139,7 @@ export function Projects() {
                 <FilterContainer>
                     {
                         tablTechno.map((techno, index)=> {
-                            return <FilterStyled onClick={(e)=>filterByTechno(e)} key={index}>{techno}</FilterStyled>
+                            return <Button onClick={(e)=>filterByTechno(e)} type="filter" key={index}>{techno}</Button>
                         })
                     }
                      
