@@ -37,7 +37,7 @@ const ProjectTechnos = styled.div`
     border-radius: 0 18px 18px 0;
     z-index:8;
 `
-export function Project({ project } : { project: ProjectType } ) {
+export function ProjectCard({ project } : { project: ProjectType } ) {
     const language = useSelector((state: RootState) => state.languageSlice.language)
     // const bgColor = (project.favorite)? : "#F1F1F1"
    

@@ -9,7 +9,7 @@ import { Provider } from 'react-redux'
 import { store } from './app/store.ts' 
 
 import { Home } from './Pages/Home/Home.tsx'
-import { Projects } from './Pages/Projects/Projets.tsx'
+import { ProjectsPage } from './Pages/Projects/ProjetsPage.tsx'
 import { About } from './Pages/About/About.tsx'
 import GlobalStyle from './components/GlobalStyle/GlobalStyle.tsx'
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Projects",
-    element: <Projects/>
+    element: <ProjectsPage/>
   },
   {
     path: "/about",

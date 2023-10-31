@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Nav } from "../../components/Nav/Nav";
 import { RootState } from "../../app/store";
-import { Project } from "../../components/Project/Project";
+import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 import styled from "styled-components";
 import { Hero } from "../../components/Hero/Hero";
 import Technos from "../../components/Technos/Technos";
@@ -36,7 +36,7 @@ export function Home() {
       
       <ProjectsContainer>
         { favorites.map((favorite, index) => {
-          return <Project project={ favorite } key={ index } ></Project>
+          return <ProjectCard project={ favorite } key={ index }/>
         }) }
         <ButtonLink to="/Projects">{traduction.buttons.toProjects[language]}</ButtonLink>
       </ProjectsContainer>
