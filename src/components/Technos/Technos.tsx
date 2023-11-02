@@ -50,7 +50,7 @@ padding: 6rem;
 gap: 2rem;
 background-color: #172429;
 background-color: #DDDDDD;
-background-color: #222222;
+/* background-color: #222222; */
 
 `
 const CallToActionWrapper = styled.div`
