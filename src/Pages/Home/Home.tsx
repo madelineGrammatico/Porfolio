@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
 import { Nav } from "../../components/Nav/Nav";
 import { RootState } from "../../app/store";
-import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 import styled from "styled-components";
 import { Hero } from "../../components/Hero/Hero";
 import Technos from "../../components/Technos/Technos";
 import colors from "../../color";
 import { ButtonLink } from "../../components/Button/ButtonLink"; 
+import { ProjectFav } from "../../components/ProjectCard/ProjectFav";
 
 const ProjectsContainer = styled.section`
 display: grid;
@@ -36,7 +36,7 @@ export function Home() {
       
       <ProjectsContainer>
         { favorites.map((favorite, index) => {
-          return <ProjectCard project={ favorite } key={ index }/>
+          return <ProjectFav project={ favorite } key={ index }/>
         }) }
         <ButtonLink to="/Projects">{traduction.buttons.toProjects[language]}</ButtonLink>
       </ProjectsContainer>
