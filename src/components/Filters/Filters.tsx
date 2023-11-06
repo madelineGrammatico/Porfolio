@@ -107,21 +107,20 @@ export function Filters() {
     }
     return(
         <HeaderProject>
-                <TitleFilter>{ traduction.pageTitle[language] } 
-                    { filters.map((filter, index) => 
-                        <Button onClick={(e) => removeFilterElement(e)} type="filter" key={index}>{filter}</Button>
-                    )}
-                </TitleFilter>
-                <p>{traduction.filterChoice[language]}</p>
-                <FilterContainer>
-                    {
-                        tablTechno.map((techno, index)=> {
-                            return <Button onClick={(e)=>filterByTechno(e)} type="tag" key={index}>{techno}</Button>
-                        })
-                    }
-                     
-                </FilterContainer>
-                <Button onClick={()=> resetProjects()} type="reset">{traduction.resetButton[language]}</Button>
-            </HeaderProject>
+            <TitleFilter>{ traduction.pageTitle[language] } 
+                { filters.map((filter, index) => 
+                    <Button onClick={(e) => removeFilterElement(e)} type="filter" key={index}>{filter}</Button>
+                )}
+            </TitleFilter>
+            <p>{traduction.filterChoice[language]}</p>
+            <FilterContainer>
+                {
+                    tablTechno.map((techno, index)=> {
+                        return <Button onClick={(e)=>filterByTechno(e)} type="tag" key={index}>{techno}</Button>
+                    })
+                }  
+            </FilterContainer>
+            <Button onClick={()=> resetProjects()} type="reset">{traduction.resetButton[language]}</Button>
+        </HeaderProject>
     )
 }

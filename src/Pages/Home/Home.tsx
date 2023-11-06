@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Nav } from "../../components/Nav/Nav";
 import { RootState } from "../../app/store";
 import styled from "styled-components";
@@ -7,6 +7,7 @@ import Technos from "../../components/Technos/Technos";
 import colors from "../../color";
 import { ButtonLink } from "../../components/Button/ButtonLink"; 
 import { ProjectFav } from "../../components/ProjectCard/ProjectFav";
+import { initializeProjects } from "../../app/projectsSlice/projectsSlice";
 
 const ProjectsContainer = styled.section`
 display: grid;
@@ -27,7 +28,8 @@ export function Home() {
   const projects = useSelector((state: RootState) => state.projectsSlice.projects)
   const favorites = projects.filter((project) => { return project.favorite === true})
   const language = useSelector((state: RootState) => state.languageSlice.language)
-
+  const dispatch  = useDispatch()
+  dispatch(initializeProjects())
   return (
     <main>
       <Nav/>
