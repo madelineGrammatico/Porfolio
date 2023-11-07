@@ -11,11 +11,12 @@ const ButtonPrimary = styled.button`
 `
 const ButtonResetFilter = styled.button`
     ${buttonGlobal};
-    border: 3px solid transparent;
-    background-color: transparent;
+    border: 3px solid white;
+    background-color: white;
+    color: ${colors.fourth};
     &:hover {
         border: 3px solid white;
-        background-color: white;
+        background-color: transparent;
     }
 `
 const ButtonTag = styled.button`

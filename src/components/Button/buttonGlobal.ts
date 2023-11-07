@@ -2,7 +2,11 @@ import colors from "../../color"
 
 const buttonBasic = `
     color: white;
-    padding: 1.2rem;
+    padding: 1.5rem;
+    line-height: 0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
     border-radius: 8px;
     box-sizing: border-box;
     width: fit-content;
