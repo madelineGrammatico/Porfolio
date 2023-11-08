@@ -1,7 +1,7 @@
 import colors from "../../color"
 
 const buttonBasic = `
-    color: white;
+    color: ${colors.white};
     padding: 1.5rem;
     line-height: 0;
     display: flex;

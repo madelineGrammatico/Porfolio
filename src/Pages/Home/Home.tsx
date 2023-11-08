@@ -3,7 +3,7 @@ import { Nav } from "../../components/Nav/Nav";
 import { RootState } from "../../app/store";
 import styled from "styled-components";
 import { Hero } from "../../components/Hero/Hero";
-import Technos from "../../components/Technos/Technos";
+import {Technos} from "../../components/Technos/Technos";
 import colors from "../../color";
 import { ButtonLink } from "../../components/Button/ButtonLink"; 
 import { ProjectFav } from "../../components/ProjectCard/ProjectFav";

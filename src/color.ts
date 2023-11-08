@@ -5,5 +5,6 @@ const colors = {
     fourth: "#ff7e67", 
     // fifth: "#10161d",
     fifth: "#10161d",
+    white: "#DDDDDD",
 }
 export default  colors

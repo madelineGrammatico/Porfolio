@@ -7,24 +7,32 @@ import { ButtonLink } from "../../components/Button/ButtonLink";
 const HeroStyled = styled.section`
   background-color: ${colors.second};
   color: white;
-  height: 70vh;
-  display: flex;
+  height: 77vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr auto 1fr;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 `
 const HeroProfile = styled.section`
-  background-color: ${colors.third};
   height: 100%;
   color: ${colors.first};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-  width: 40%;
-  padding: 5rem;
+  justify-content: space-between;
+  align-items: start;
+  /* width: 40%; */
+  padding: 0 5rem;
+  grid-column: 1;
+  grid-row: 2;
+  z-index:2;
   h1{
     margin:0;
+  }
+  h2 {
+    margin:0;
+    padding: 0
   }
   
 `
@@ -32,16 +40,28 @@ const HeroSecond = styled.div`
   flex-flow: wrap;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
- 
+  /* justify-content: flex-start;
+  align-items: start; */
+  grid-column: 2;
+  grid-row: 2;
   gap: 1rem;
-  padding: 5rem;
-  width: 60%;
+  padding:  0 5rem;
+  height:100%
+  /* width: 60%; */
   p  {
     flex: 1 100%
+
   }
 `
-
+const BackgroundRight = styled.div`
+  background-color: ${colors.third};
+  grid-row: 1 /span 3;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  z-index:1;
+  content: " ";
+`
 export function Hero() {
    
     const traduction = {
@@ -73,9 +93,10 @@ export function Hero() {
     <HeroStyled>
       <HeroProfile>
         <h1>Madeline Grammatico</h1>
-        <p>{ traduction.heroJob[language] }</p>
+        <h2>{ traduction.heroJob[language].toUpperCase() }</h2>
         
       </HeroProfile>
+      <BackgroundRight></BackgroundRight>
       <HeroSecond>
         <p>{ traduction.heroIntroduction[language] }</p>
         <ButtonLink type="primary" to="/About">{ traduction.heroButton[language]}</ButtonLink>

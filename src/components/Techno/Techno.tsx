@@ -6,9 +6,9 @@ const TechnoStyled = styled.span`
       align-items: center;
       color: ${colors.first};
       font-weight: 900;
-      padding: 0.8rem;
+      padding: 0.8rem 1rem;
       border-radius: 2rem;
-      min-width: 6rem;
+      min-width: 5rem;
       border: solid 4px ${colors.first};
     `
 export function Techno({children}: {children: string}) {

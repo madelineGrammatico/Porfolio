@@ -31,47 +31,47 @@ const traduction = {
 }
 
 const TechnosContainer = styled.section`
-display: flex;
-flex-flow: row wrap;
-justify-content: flex-start;
-align-items: center;
-gap: 1.3rem;
-width: 100%;
-padding:  0 4rem;
-color: ${colors.second};
-
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem 1.3rem;
+  width: 100%;
+  padding:  0 4rem;
+  
 `
 const Container= styled.section`
-display: flex;
-flex-flow: column;
-justify-content: flex-start;
-align-items: start;
-padding: 6rem;
-gap: 2rem;
-background-color: #172429;
-background-color: #DDDDDD;
-/* background-color: #222222; */
-
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 4rem 6rem;
+  gap: 1rem;
+  background-color: ${colors.white};
+  color: ${colors.first};
+  font-weight: 900;
 `
 const CallToActionWrapper = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-align-self:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding-top: 1rem
 `
-export default function Technos() {
+
+export function Technos() {
   const language = useSelector((state: RootState) => state.languageSlice.language)
   return (
     <Container>
       <p>{traduction.technosIUse[language]}</p>
       <TechnosContainer>
-          { technosData.map((techno, index)=>{
-              return <Techno key={"techno"+ index}>
-                {techno}
-              </Techno>
-          })}
-          <p>Mais pas que ...</p>
+        { technosData.map((techno, index)=>{
+            return <Techno key={"techno"+ index}>
+              {techno}
+            </Techno>
+        })}
+        <p>Mais pas que ...</p>
       </TechnosContainer>
       <CallToActionWrapper>
         

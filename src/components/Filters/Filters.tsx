@@ -26,44 +26,49 @@ const traduction = {
 }
 
 const TitleFilter = styled.h1`
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-align-items: center;
-gap: 1rem;
-color: white;
-span {
-    color: ${colors.fourth};
-    background-color: white;
-    border: solid ${colors.fourth} 6px;
-    padding: 1.5rem;
-    border-radius: 4rem;
-    cursor: pointer;
-    
-    &:hover{
-        color: white;
-        background-color: ${colors.fourth};
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: ${colors.white};
+    span {
+        color: ${colors.fourth};
+        background-color: ${colors.white};
+        border: solid ${colors.fourth} 6px;
+        padding: 1.5rem;
+        border-radius: 4rem;
+        cursor: pointer;
+        
+        &:hover{
+            color: ${colors.white};
+            background-color: ${colors.fourth};
+        }
     }
-}
 `
 const FilterContainer= styled.div`
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-align-items: center;
-gap: 1.3rem;
-width: 100%;
-padding:  0 4rem 2rem 4rem;
-color: ${colors.first};
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    width: 100%;
+    padding:  0 4rem 2rem 4rem;
+    color: ${colors.first};
 `
 
 const HeaderProject = styled.header`
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-padding-bottom: 2rem;
-background-color:${colors.fourth};
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 2rem;
+    background-color:${colors.fourth};
+    padding-top: 6rem;
+    p {
+        color: ${colors.white};
+        font-weight: 900;
+    }
 `
 
 export function Filters() {
@@ -118,7 +123,7 @@ export function Filters() {
                     tablTechno.map((techno, index)=> {
                         return <Button onClick={(e)=>filterByTechno(e)} type="tag" key={index}>{techno}</Button>
                     })
-                }  
+                }
             </FilterContainer>
             <Button onClick={()=> resetProjects()} type="reset">{traduction.resetButton[language]}</Button>
         </HeaderProject>
