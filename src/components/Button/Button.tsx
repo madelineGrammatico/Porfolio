@@ -47,15 +47,22 @@ const ButtonFilter = styled.button`
 `
 const ButtonSmall = styled.button`
     ${buttonGlobal};
-    padding:  1rem;
+    padding:  0.8rem;
+    font-size: 0.8rem;
     background-color: ${colors.fourth};
     border: 1px solid ${colors.fourth};
     box-shadow: none;
     color: ${colors.white};
+    
     &:hover{
         color: ${colors.fourth};
         background-color: ${colors.third};
         border: 1px solid ${colors.third};
+    }
+    @media screen and (min-width: 500px){
+        padding:  1rem;
+        font-size: 1rem;
+        position: inherit;
     }
 `
 export function Button({children, type, onClick }: { children: string, type?: "reset" | "primary"| "tag" | "filter"| "small", onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void }) {

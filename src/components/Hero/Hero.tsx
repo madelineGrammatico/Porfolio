@@ -6,61 +6,107 @@ import { ButtonLink } from "../../components/Button/ButtonLink";
 
 const HeroStyled = styled.section`
   background-color: ${colors.second};
-  color: white;
-  height: 77vh;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr auto 1fr;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    color: white;
+    min-height: 77vh;
+    overflow:hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+  @media screen and (min-width: 1000px) {
+    
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr auto 1fr;
+    flex-direction: row;
+    
+  }
 `
-const HeroProfile = styled.section`
+const HeroLeft = styled.section`
   height: 100%;
+  max-width:100vw;
+  width:100%;
   color: ${colors.first};
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
-  /* width: 40%; */
-  padding: 0 5rem;
+  z-index:4;
+  padding: 3rem 2rem 2rem 2rem;
   grid-column: 1;
-  grid-row: 2;
-  z-index:2;
+  grid-row: 1;
   h1{
     margin:0;
+    font-size: 2.7rem;
+    font-weight: 900;
   }
   h2 {
     margin:0;
-    padding: 0
+    padding: 0;
+    font-size: 1.2rem;
   }
-  
+  @media screen and (min-width: 1000px) {
+    padding: 0 5rem;
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: space-between;
+    padding: 6rem 2rem 2rem 2rem;
+    h1 {
+      font-size: 3.2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 `
-const HeroSecond = styled.div`
+const HeroRight = styled.div`
   flex-flow: wrap;
   display: flex;
   flex-direction: row;
   /* justify-content: flex-start;
   align-items: start; */
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
   gap: 1rem;
-  padding:  0 5rem;
-  height:100%
+  padding: 2rem;
+  max-width:100vw;
+  /* height:100% */
   /* width: 60%; */
   p  {
     flex: 1 100%
 
   }
+  @media screen and (min-width: 1000px) {
+    flex-flow: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    grid-column: 2;
+    grid-row: 2;
+    gap: 1rem;
+    padding:  0 5rem;
+    height:100%
+  }
+
 `
-const BackgroundRight = styled.div`
+const BackgroundLeft = styled.div`
   background-color: ${colors.third};
-  grid-row: 1 /span 3;
+  grid-row: 1 ;
   grid-column: 1;
-  width: 100%;
+  /* width: 100%; */
+  max-width: 100vw; 
   height: 100%;
-  z-index:1;
-  content: " ";
+  /* z-index:3; */
+  /* content: " "; */
+  @media screen and (min-width: 1000px) {
+    display:block;
+    grid-row: 1/span 3 ;
+    grid-column: 1;
+    
+  }
 `
 export function Hero() {
    
@@ -91,19 +137,19 @@ export function Hero() {
 
   return (
     <HeroStyled>
-      <HeroProfile>
+      <HeroLeft>
         <h1>Madeline Grammatico</h1>
         <h2>{ traduction.heroJob[language].toUpperCase() }</h2>
         
-      </HeroProfile>
-      <BackgroundRight></BackgroundRight>
-      <HeroSecond>
+      </HeroLeft>
+      <BackgroundLeft></BackgroundLeft>
+      <HeroRight>
         <p>{ traduction.heroIntroduction[language] }</p>
         <ButtonLink type="primary" to="/About">{ traduction.heroButton[language]}</ButtonLink>
         {/* <ButtonLink type="secondary" to='/Projects'>{ traduction.heroSecondButton[language]}</ButtonLink> */}
         <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
         <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">GitHub</ButtonLink>
-      </HeroSecond>
+      </HeroRight>
     </HeroStyled>
   )
 }

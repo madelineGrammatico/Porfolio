@@ -9,10 +9,10 @@ const technosData = [
   "React",
   "TypeScript",
   "Redux Toolkit",
-  "React Router",
   "Vite",
-  "CSS Modules",
+  "React Router",
   "SASS",
+  "CSS Modules",
   "HTML",
   "CSS",
   "JavaScript",
@@ -26,30 +26,43 @@ const traduction = {
   },
   buttonForFilters: {
     EN: "See all technologies",
-    FR: "Voir toutes les technologies"
+    FR: "Toutes les technologies"
   }
 }
 
-const TechnosContainer = styled.section`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem 1.3rem;
-  width: 100%;
-  padding:  0 4rem;
-  
-`
 const Container= styled.section`
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: start;
-  padding: 4rem 6rem;
-  gap: 1rem;
+  padding: 2rem;
+  /* gap: 1rem; */
   background-color: ${colors.white};
   color: ${colors.first};
   font-weight: 900;
+
+  @media screen and (min-width: 1000px){
+  padding: 4rem 6rem;
+  /* gap: 1rem; */
+
+  }
+`
+
+const TechnosContainer = styled.section`
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  /* padding: 0 1.7rem; */
+  @media screen and (min-width: 1000px){
+    gap: 1rem 1.3rem;
+    padding:  0 4rem;
+    justify-content: center;
+  }
 `
 const CallToActionWrapper = styled.div`
   display: flex;
