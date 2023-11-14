@@ -53,7 +53,7 @@ const FilterContainer= styled.div`
     align-items: center;
     gap: 1.3rem;
     width: 100%;
-    padding:  0 4rem 2rem 4rem;
+    padding:  0 0 2rem 0;
     color: ${colors.first};
 `
 
@@ -62,12 +62,16 @@ const HeaderProject = styled.header`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 2rem;
+    padding: 2rem;
     background-color:${colors.fourth};
-    padding-top: 6rem;
+    
     p {
         color: ${colors.white};
         font-weight: 900;
+    }
+    @media screen and (min-width: 700px) {
+        padding: 6rem 4rem 2rem 4rem;
+    
     }
 `
 

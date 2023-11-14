@@ -7,11 +7,31 @@ import colors from "../../color";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 
 const ProjectsContainer = styled.section`
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 6rem 2rem ;
+  background-color: ${colors.third};
+  
+  @media screen and (min-width: 600px) {
+    grid-template-columns: 1fr ;
+    padding: 6rem;
+  }
+  @media screen and (min-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 6rem 10rem;
+  }
+  @media screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 6rem 10rem ;
-    background-color: ${colors.third};
+    padding: 6rem 2rem;
+  }
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem;
+  }
+  @media screen and (min-width: 1400px) {
+    padding: 6rem 10rem;
+  }
 `
 
 export function ProjectsSection() {

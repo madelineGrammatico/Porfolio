@@ -9,12 +9,12 @@ const ProjectStyled = styled.article`
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
     background: linear-gradient(170deg, ${colors.second} 10%, ${colors.first} 97%);
-    color: white;
+    color: ${colors.white};
     overflow: hidden;
     border-radius: 18px;
-    /* box-sizing: content-box; */
     cursor: pointer;
     overflow: hidden;
+    
     &:hover {
         color: ${colors.fourth};
         box-shadow: 0 0 15px rgb(50, 50, 50);

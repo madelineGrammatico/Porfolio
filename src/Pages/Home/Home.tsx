@@ -10,11 +10,11 @@ import { ProjectFav } from "../../components/ProjectCard/ProjectFav";
 import { initializeProjects } from "../../app/projectsSlice/projectsSlice";
 
 const ProjectsContainer = styled.section`
-display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 6rem 2rem;
-    background-color: ${colors.third};
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 6rem 2rem;
+  background-color: ${colors.third};
 
   @media screen and (min-width: 600px) {
     grid-template-columns: 1fr ;

@@ -36,13 +36,13 @@ const ButtonFilter = styled.button`
     ${buttonGlobal};
     color: ${colors.fourth};
     background-color: ${colors.white};
-    border:  6px solid ${colors.fourth};
-    padding: 1.5rem;
+    border:  6px solid ${colors.white};
+    padding: 2rem;
     border-radius: 4rem;
     &:hover{
         color: ${colors.white};
         background-color: ${colors.fourth};
-        border: 6px solid ${colors.fourth};
+        border: 6px solid ${colors.white};
     }
 `
 const ButtonSmall = styled.button`

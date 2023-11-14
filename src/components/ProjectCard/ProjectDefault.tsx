@@ -5,27 +5,34 @@ import styled from "styled-components";
 import colors from "../../color";
 
 const ProjectStyled = styled.article`
-display: grid;
-grid-template-columns: 3fr 1.2fr;
-background:  ${colors.third};
-color: ${colors.white};
-overflow: hidden;
-border-radius: 18px;
-border: 3px solid ${colors.white};
-/* box-sizing: content-box; */
-cursor: pointer;
-overflow: hidden;
-&:hover {
-  color: ${colors.fourth};
-  box-shadow: 0 0 15px rgb(50, 50, 50);
-  div {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    background-color:  ${colors.third};
+    color: ${colors.white};
+    overflow: hidden;
+    border-radius: 18px;
+    border: 3px solid ${colors.white};
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
     color: ${colors.fourth};
-  }
-}
+    box-shadow: 0 0 15px rgb(50, 50, 50);
+    div {
+        color: ${colors.fourth};
+    }
+    }
+    @media screen and (min-width: 500px) {
+        display: grid;
+        grid-template-columns: 3fr 1.2fr;
+        grid-template-rows: 1fr;
+        
+    }
 `
 const ProjectDescription = styled.div`
-    padding: 1rem 2rem;
-    box-shadow: 2px 0px 3px ${colors.second};
+    padding: 1rem 1rem 1rem 1.5rem;
+    box-shadow: 2px 0px 3px ${colors.third};
     z-index: 9;
     header {
         font-size: 1.5rem;
@@ -33,15 +40,39 @@ const ProjectDescription = styled.div`
     }
 
     ul, li {
-        font-size: .9rem
+        font-size: .9rem;
+        padding: 0;
+    }
+    @media screen and (min-width: 500px) {
+        padding: 1rem 2rem;
     }
 `
 const ProjectTechnos = styled.div`
     background-color: ${colors.white};
     color: ${colors.third};
-    padding: 2rem 1rem rem 0rem;
-    font-size:0.9rem;
-    
+    padding: 1rem 0.5rem 1rem 2rem;
+    ul {
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0 1rem;
+        /* list-style-type: none; */
+        padding:0;
+        /* background-color: hotpink; */
+        margin:0;
+        font-size:0.9rem;
+    }
+    @media screen and (min-width: 500px) {
+        padding: 1rem 0.5rem 1rem 2rem;
+        ul {
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            list-style-type: inherit;
+        }
+    }
 `
 export function ProjectDefault({project}: { project: ProjectType }) {
     const language = useSelector((state: RootState) => state.languageSlice.language)
