@@ -23,8 +23,12 @@ const HeaderAbout = styled.header`
   align-items: center;
   background-color: ${colors.second};
   color: ${colors.white};
-  padding: 6rem 0 2rem 0;
+  padding: 2rem 0;
   height: 20vh;
+  @media screen and (min-width: 700px) {
+        padding: 6rem 4rem 2rem 4rem;
+    
+    }
 `
 const ResumeContainer = styled.section`
   display: flex;
