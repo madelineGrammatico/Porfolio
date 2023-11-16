@@ -26,11 +26,11 @@ const ButtonLinkSecondary = styled(Link)`
 `
 const ButtonLinkOut = styled(Link)`
     ${buttonGlobal};
-    border: 3px solid transparent;
+    border: 6px solid transparent;
     background-color: transparent;
-    color: ${colors.fourth};
+    color: ${colors.white};
     &:hover {
-        border: 3px solid white;
+        border: 6px solid white;
         background-color: white;
         color:${colors.fourth};
     }

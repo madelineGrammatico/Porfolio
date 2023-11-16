@@ -31,18 +31,18 @@ const TitleFilter = styled.h1`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    color: ${colors.white};
+    color: ${colors.fourth};
     span {
-        color: ${colors.fourth};
-        background-color: ${colors.white};
-        border: solid ${colors.fourth} 6px;
+        color: ${colors.white};
+        background-color: ${colors.fourth};
+        border: solid ${colors.white} 6px;
         padding: 1.5rem;
         border-radius: 4rem;
         cursor: pointer;
         
         &:hover{
-            color: ${colors.white};
-            background-color: ${colors.fourth};
+            color: ${colors.fourth};
+            background-color: ${colors.white};
         }
     }
 `
@@ -63,10 +63,10 @@ const HeaderProject = styled.header`
     justify-content: flex-start;
     align-items: center;
     padding: 2rem;
-    background-color:${colors.fourth};
+    background-color:${colors.white};
     
     p {
-        color: ${colors.white};
+        color: ${colors.fourth};
         font-weight: 900;
     }
     @media screen and (min-width: 700px) {

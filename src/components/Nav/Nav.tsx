@@ -36,7 +36,7 @@ const LinksContainer = styled.div`
   display: flex;
   gap: 1rem;
     a {
-      color: ${colors.fourth};
+      color: ${colors.white};
       font-weight: 900;
       &:hover{
         color:${colors.third};
@@ -49,7 +49,7 @@ const NavBar = styled.nav`
   align-items: center;
   padding: 0.5rem 1.2rem;
   width: 100vw;
-  background-color: ${colors.white};
+  background-color: ${colors.fourth};
   box-shadow: 0 0 15px rgba(50, 50, 50, 0.4);
 
   @media screen and (min-width: 500px) {

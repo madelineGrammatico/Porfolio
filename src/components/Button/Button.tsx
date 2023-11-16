@@ -11,48 +11,49 @@ const ButtonPrimary = styled.button`
 `
 const ButtonResetFilter = styled.button`
     ${buttonGlobal};
-    border: 3px solid ${colors.white};
-    background-color: ${colors.white};
-    color: ${colors.fourth};
+    border: 3px solid ${colors.fourth};
+    background-color: ${colors.fourth};
+    color: ${colors.white};
     &:hover {
-        border: 3px solid ${colors.white};
+        border: 3px solid ${colors.fourth};
         background-color: transparent;
-        color: ${colors.white};
+        color: ${colors.fourth};
     }
 `
 const ButtonTag = styled.button`
     ${buttonGlobal};
-    background-color: ${colors.fourth};
-    border: 3px solid ${colors.white};
+    background-color: ${colors.white};
+    border: 3px solid ${colors.fourth};
+    color: ${colors.fourth};
     padding: 1rem;
     border-radius: 2rem;
     &:hover {
-        color:${colors.fourth};
-        background-color: ${colors.white};
-        border-color: ${colors.white};
+        color:${colors.white};
+        background-color: ${colors.fourth};
+        border-color: ${colors.fourth};
     }
 `
 const ButtonFilter = styled.button`
     ${buttonGlobal};
-    color: ${colors.fourth};
-    background-color: ${colors.white};
-    border:  6px solid ${colors.white};
+    color: ${colors.white};
+    background-color: ${colors.fourth};
+    border:  6px solid ${colors.fourth};
     padding: 2rem;
     border-radius: 4rem;
     &:hover{
-        color: ${colors.white};
-        background-color: ${colors.fourth};
-        border: 6px solid ${colors.white};
+        color: ${colors.fourth};
+        background-color: ${colors.white};
+        border: 6px solid ${colors.fourth};
     }
 `
 const ButtonSmall = styled.button`
     ${buttonGlobal};
     padding:  0.8rem;
     font-size: 0.8rem;
-    background-color: ${colors.fourth};
-    border: 1px solid ${colors.fourth};
+    background-color: ${colors.white};
+    border: 1px solid ${colors.white};
     box-shadow: none;
-    color: ${colors.white};
+    color: ${colors.fourth};
     
     &:hover{
         color: ${colors.fourth};

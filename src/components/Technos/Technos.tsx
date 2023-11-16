@@ -38,7 +38,7 @@ const Container= styled.section`
   padding: 2rem;
   /* gap: 1rem; */
   background-color: ${colors.white};
-  color: ${colors.first};
+  color: ${colors.second};
   font-weight: 900;
 
   @media screen and (min-width: 1000px){
@@ -60,7 +60,7 @@ const TechnosContainer = styled.section`
   /* padding: 0 1.7rem; */
   @media screen and (min-width: 1000px){
     gap: 1rem 1.3rem;
-    padding:  0 4rem;
+    padding:  0.8rem 4rem;
     justify-content: center;
   }
 `
