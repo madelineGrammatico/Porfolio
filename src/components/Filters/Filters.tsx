@@ -92,9 +92,9 @@ export function Filters() {
     
     selectTechnos()
     
-    const filterByTechno = (e: React.MouseEvent<HTMLElement> ) => {
-        e.preventDefault()
-        const p = e.target as HTMLElement
+    const filterByTechno = (e: React.MouseEvent<HTMLElement> | undefined) => {
+        e?.preventDefault()
+        const p = e?.target as HTMLElement
         dispatch(addFilter(p.innerText))
     }
 
@@ -108,9 +108,8 @@ export function Filters() {
         dispatch(initilizeFilter())
     }
 
-    const removeFilterElement = (e: React.MouseEvent) => {
-        const span = e.target as HTMLElement
-        console.log(span.innerHTML)
+    const removeFilterElement = (e: React.MouseEvent | undefined) => {
+        const span = e?.target as HTMLElement
         dispatch(removeFilter(span.innerHTML))
         selectTechnos()
     }
