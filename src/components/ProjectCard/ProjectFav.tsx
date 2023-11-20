@@ -3,18 +3,13 @@ import { useSelector } from "react-redux";
 import { ProjectType } from '../../app/projectsSlice/projectsSlice';
 import styled from "styled-components";
 import colors from "../../color";
+import { Link } from "react-router-dom";
+
 
 const ProjectStyled = styled.article`
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
-    background: linear-gradient(170deg, ${colors.second} 10%, ${colors.first} 97%);
-    color: ${colors.white};
-    overflow: hidden;
     border-radius: 18px;
     cursor: pointer;
     overflow: hidden;
-    
     &:hover {
         color: ${colors.fourth};
         box-shadow: 0 0 15px rgb(50, 50, 50);
@@ -22,16 +17,11 @@ const ProjectStyled = styled.article`
             color: ${colors.fourth};
         }
     }
-    @media screen and (min-width: 500px) {
-        display: grid;
-        grid-template-columns: 3fr 1.2fr;
-        grid-template-rows: 1fr;
-        
-    }
 `
 const ProjectDescription = styled.div`
     padding: 1rem 1rem 1rem 1.5rem;
     box-shadow: 2px 0px 3px ${colors.second};
+    background:  linear-gradient(170deg, ${colors.second} 10%, ${colors.first} 97%);
     z-index: 9;
     header {
     font-size: 1.5rem;
@@ -73,27 +63,51 @@ const ProjectTechnos = styled.div`
         }
     }
 `
+const LinkToProject = styled(Link)`
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    color: ${colors.white};
+    overflow: hidden;
+    height: 100%;
+    &:hover {
+        color: ${colors.fourth};
+        box-shadow: 0 0 15px rgb(50, 50, 50);
+        div {
+            color: ${colors.fourth};
+        }
+
+    }
+    @media screen and (min-width: 500px) {
+        display: grid;
+        grid-template-columns: 3fr 1.2fr;
+        grid-template-rows: 1fr;
+        
+    }
+`
 export function ProjectFav({project}: { project: ProjectType }) {
     const language = useSelector((state: RootState) => state.languageSlice.language)
+    const link = (project.links.web)? project.links.web : project.links.github
     return(
     <ProjectStyled>
-        <ProjectDescription>
-            <header>{ project.name }</header>
-            <p>{ project.descriptions[language]}</p>
-            <ol>
-                { project.skills[language].map((skill: string, index: number)=> {
-                    return <li key={ project.id + "skill" + index }>{ skill }</li>
+        <LinkToProject to={link} target="_blank">
+            <ProjectDescription>
+                <header>{ project.name }</header>
+                <p>{ project.descriptions[language]}</p>
+                <ol>
+                    { project.skills[language].map((skill: string, index: number)=> {
+                        return <li key={ project.id + "skill" + index }>{ skill }</li>
+                    })}
+                </ol>
+            </ProjectDescription>
+            <ProjectTechnos>
+            <ul>
+                { project.technos.map((techno: string, index: number) => {
+                    return <li key={ project.id + "techno" + index }>{ techno }</li>
                 })}
-            </ol>
-        </ProjectDescription>
-        <ProjectTechnos>
-        <ul>
-            { project.technos.map((techno: string, index: number) => {
-                return <li key={ project.id + "techno" + index }>{ techno }</li>
-            })}
-        </ul>
-        </ProjectTechnos>
-        
+            </ul>
+            </ProjectTechnos>
+        </LinkToProject>
     </ProjectStyled>
     )
 }

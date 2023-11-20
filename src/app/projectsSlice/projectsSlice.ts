@@ -56,7 +56,7 @@ const initialState: ProjectsType= {
                 ]
             },
             links: {
-                github: ""
+                github: "https://github.com/madelineGrammatico/Porfolio"
             },
         },
         {
@@ -88,7 +88,7 @@ const initialState: ProjectsType= {
                 ]
             },
             links: {
-                github: ""
+                github: "https://github.com/madelineGrammatico/P14_RHnet_React"
             },
         },
         {
@@ -118,7 +118,7 @@ const initialState: ProjectsType= {
                 ]
             },
             links: {
-                github: "https://github.com/madelineGrammatico/kasa",
+                github: "https://github.com/madelineGrammatico/P14_RHnet_React",
                 web: "https://www.npmjs.com/package/mg-p14-modal"
             },
         },
@@ -151,7 +151,7 @@ const initialState: ProjectsType= {
                 ]
             },
             links: {
-                github: "",
+                github: "https://github.com/madelineGrammatico/P13-argentBank",
             },
         },
         {
