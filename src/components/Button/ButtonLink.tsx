@@ -36,18 +36,13 @@ const ButtonLinkOut = styled(Link)`
     }
 `
 export function ButtonLink({children, type, to}: {children: string, type?: "secondary" | "primary" | "outSite", to: string}) {
-    // const buttonType = type ==="secondary"? 
-    //     <ButtonLinkSecondary to={to}>{children}</ButtonLinkSecondary>
-    // : 
-    //     <ButtonLinkPrimary to={to}>{children}</ButtonLinkPrimary>
-
     let buttonType
     switch(type) {
         case "secondary":
             buttonType = <ButtonLinkSecondary to={to}>{children}</ButtonLinkSecondary>
         break
         case "outSite":
-            buttonType = <ButtonLinkOut to={to}>{children}</ButtonLinkOut>
+                buttonType = <ButtonLinkOut to={to} target={"_blank"}>{children}</ButtonLinkOut>
         break
         default:
             buttonType = <ButtonLinkPrimary to={to}>{children}</ButtonLinkPrimary>

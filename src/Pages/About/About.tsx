@@ -4,6 +4,7 @@ import { RootState } from "../../app/store";
 import { Button } from "../../components/Button/Button";
 import styled from "styled-components"
 import colors from "../../color";
+import { ScrollRestoration } from "react-router-dom";
 
 
 const traduction = {
@@ -68,6 +69,7 @@ export function About() {
         <ResumeContainer>
         <Button onClick={()=> downloadResume()}>{traduction.downloadButton[language]}</Button>
         </ResumeContainer>
+        <ScrollRestoration/>
     </main>
   )
 }

@@ -8,6 +8,7 @@ import colors from "../../color";
 import { ButtonLink } from "../../components/Button/ButtonLink"; 
 import { ProjectFav } from "../../components/ProjectCard/ProjectFav";
 import { initializeProjects } from "../../app/projectsSlice/projectsSlice";
+import { ScrollRestoration } from "react-router-dom";
 
 const ProjectsContainer = styled.section`
   display: grid;
@@ -62,7 +63,7 @@ export function Home() {
         }) }
         <ButtonLink to="/Projects">{traduction.buttons.toProjects[language]}</ButtonLink>
       </ProjectsContainer>
-        
+      <ScrollRestoration/>
     </main>
   )
 }
