@@ -7,7 +7,7 @@ const globalStyle = createGlobalStyle`
         * {
         box-sizing: border-box
         }
-        *:focus {
+        *:focus-visible {
             border: 6px solid black;
         }
     }
