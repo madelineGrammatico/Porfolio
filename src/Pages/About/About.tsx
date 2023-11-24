@@ -46,7 +46,9 @@ export function About() {
   const language = useSelector((state: RootState) => state.languageSlice.language)
 
   const downloadResume = ()=> {
-    const url = "http://localhost:5173/CV_Grammatico_Madeline.pdf"
+    const url = language === "FR" ? 
+      "http://localhost:5173/CV_Grammatico_Madeline.pdf"
+    : "http://localhost:5173/Resume_Grammatico_Madeline.pdf"
     fetch(url)
       .then((response) => response.blob())
       .then((blob) => {
