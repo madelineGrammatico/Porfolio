@@ -15,15 +15,15 @@ import GlobalStyle from './components/GlobalStyle/GlobalStyle.tsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio",
     element: <Home/>,
   },
   {
-    path: "/Projects",
+    path: "/portfolio/projects",
     element: <ProjectsPage/>
   },
   {
-    path: "/about",
+    path: "/portfolio/about",
     element: <About/>
   }
 ])

@@ -80,9 +80,9 @@ export function Nav() {
     <Menu>
       <NavBar>
         <LinksContainer>
-          <Link to="/">{traduction.home[language]}</Link>
-          <Link to="/projects">{traduction.projects[language]}</Link>
-          <Link to="/about">{traduction.about[language]}</Link>
+          <Link to="/portfolio/">{traduction.home[language]}</Link>
+          <Link to="/portfolio/projects">{traduction.projects[language]}</Link>
+          <Link to="/portfolio/about">{traduction.about[language]}</Link>
         </LinksContainer>
         <Button onClick={HandlerToogleLanguage} type="small">{(language === "EN")? "EN" : "FR"}</Button>
       </NavBar>

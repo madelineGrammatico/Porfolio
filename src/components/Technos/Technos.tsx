@@ -88,7 +88,7 @@ export function Technos() {
       </TechnosContainer>
       <CallToActionWrapper>
         
-        <ButtonLink to="/Projects">{traduction.buttonForFilters[language]}</ButtonLink>
+        <ButtonLink to="/portfolio/projects">{traduction.buttonForFilters[language]}</ButtonLink>
       </CallToActionWrapper>
       
     </Container>

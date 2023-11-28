@@ -145,7 +145,7 @@ export function Hero() {
       <BackgroundLeft></BackgroundLeft>
       <HeroRight>
         <p>{ traduction.heroIntroduction[language] }</p>
-        <ButtonLink type="primary" to="/About">{ traduction.heroButton[language]}</ButtonLink>
+        <ButtonLink type="primary" to="/portfolio/about">{ traduction.heroButton[language]}</ButtonLink>
         {/* <ButtonLink type="secondary" to='/Projects'>{ traduction.heroSecondButton[language]}</ButtonLink> */}
         <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
         <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">Github</ButtonLink>
