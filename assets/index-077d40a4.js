@@ -216,7 +216,7 @@ Error generating stack: `+i.message+`
   @media screen and (min-width: 900px) {
     width: 40%;
   }
-`;function lf(){const e=gt(r=>r.languageSlice.language),t=Hc(),n=()=>{t(LS())};return j.jsx(Wx,{children:j.jsxs(Vx,{children:[j.jsxs(Hx,{children:[j.jsx(_n,{to:"/",children:ku.home[e]}),j.jsx(_n,{to:"/projects",children:ku.projects[e]}),j.jsx(_n,{to:"/about",children:ku.about[e]})]}),j.jsx(Ao,{onClick:n,type:"small",children:e==="EN"?"EN":"FR"})]})})}const Kx=Q(_n)`
+`;function lf(){const e=gt(r=>r.languageSlice.language),t=Hc(),n=()=>{t(LS())};return j.jsx(Wx,{children:j.jsxs(Vx,{children:[j.jsxs(Hx,{children:[j.jsx(_n,{to:"/portfolio/",children:ku.home[e]}),j.jsx(_n,{to:"/portfolio/projects",children:ku.projects[e]}),j.jsx(_n,{to:"/portfolio/about",children:ku.about[e]})]}),j.jsx(Ao,{onClick:n,type:"small",children:e==="EN"?"EN":"FR"})]})})}const Kx=Q(_n)`
     ${bn};
     border: 6px solid ${N.fourth};
     background-color: ${N.fourth};
@@ -344,7 +344,7 @@ Error generating stack: `+i.message+`
     grid-column: 1;
     
   }
-`;function Zx(){const e={pageTitle:{EN:"Home",FR:"Accueil"},heroJob:{EN:"Front End React Developer",FR:"Développeuse Front-End React"},heroIntroduction:{EN:"What sets me apart is my creativity, adaptability, and constant desire to learn and innovate. I am determined to expand my development skills while bringing a creative touch to each of your projects.",FR:"Ce qui me différencie, ce sont ma créativité, mon adaptabilité et mon désir constant d'apprendre et d'innover. Je suis déterminée à élargir mes compétences en développement tout en apportant une touche créative à chacun de vos projets."},heroButton:{EN:"Resume",FR:"Voir CV"},heroSecondButton:{EN:"See all my projects",FR:"Voir tous mes projects"}},t=gt(n=>n.languageSlice.language);return j.jsxs(Yx,{children:[j.jsxs(Jx,{children:[j.jsx("h1",{children:"Madeline Grammatico"}),j.jsx("h2",{children:e.heroJob[t].toUpperCase()})]}),j.jsx(qx,{}),j.jsxs(Xx,{children:[j.jsx("p",{children:e.heroIntroduction[t]}),j.jsx(Fo,{type:"primary",to:"/About",children:e.heroButton[t]}),j.jsx(Fo,{type:"outSite",to:"https://www.linkedin.com/in/madeline-grammatico-06012015a/",children:"Linkedin"}),j.jsx(Fo,{type:"outSite",to:"https://github.com/madelineGrammatico",children:"Github"})]})]})}const ek=Q.span`
+`;function Zx(){const e={pageTitle:{EN:"Home",FR:"Accueil"},heroJob:{EN:"Front End React Developer",FR:"Développeuse Front-End React"},heroIntroduction:{EN:"What sets me apart is my creativity, adaptability, and constant desire to learn and innovate. I am determined to expand my development skills while bringing a creative touch to each of your projects.",FR:"Ce qui me différencie, ce sont ma créativité, mon adaptabilité et mon désir constant d'apprendre et d'innover. Je suis déterminée à élargir mes compétences en développement tout en apportant une touche créative à chacun de vos projets."},heroButton:{EN:"Resume",FR:"Voir CV"},heroSecondButton:{EN:"See all my projects",FR:"Voir tous mes projects"}},t=gt(n=>n.languageSlice.language);return j.jsxs(Yx,{children:[j.jsxs(Jx,{children:[j.jsx("h1",{children:"Madeline Grammatico"}),j.jsx("h2",{children:e.heroJob[t].toUpperCase()})]}),j.jsx(qx,{}),j.jsxs(Xx,{children:[j.jsx("p",{children:e.heroIntroduction[t]}),j.jsx(Fo,{type:"primary",to:"/portfolio/about",children:e.heroButton[t]}),j.jsx(Fo,{type:"outSite",to:"https://www.linkedin.com/in/madeline-grammatico-06012015a/",children:"Linkedin"}),j.jsx(Fo,{type:"outSite",to:"https://github.com/madelineGrammatico",children:"Github"})]})]})}const ek=Q.span`
       display: flex;
       justify-content: center;
       align-items: center;
@@ -392,7 +392,7 @@ Error generating stack: `+i.message+`
   align-items: center;
   align-self: center;
   padding-top: 1rem
-`;function lk(){const e=gt(t=>t.languageSlice.language);return j.jsxs(rk,{children:[j.jsx("p",{children:xp.technosIUse[e]}),j.jsxs(ok,{children:[nk.map((t,n)=>j.jsx(tk,{children:t},"techno"+n)),j.jsx("p",{children:"Mais pas que ..."})]}),j.jsx(ik,{children:j.jsx(Fo,{to:"/Projects",children:xp.buttonForFilters[e]})})]})}const ak=Q.article`
+`;function lk(){const e=gt(t=>t.languageSlice.language);return j.jsxs(rk,{children:[j.jsx("p",{children:xp.technosIUse[e]}),j.jsxs(ok,{children:[nk.map((t,n)=>j.jsx(tk,{children:t},"techno"+n)),j.jsx("p",{children:"Mais pas que ..."})]}),j.jsx(ik,{children:j.jsx(Fo,{to:"/portfolio/projects",children:xp.buttonForFilters[e]})})]})}const ak=Q.article`
     border-radius: 18px;
     cursor: pointer;
     overflow: hidden;
@@ -493,7 +493,7 @@ Error generating stack: `+i.message+`
   @media screen and (min-width: 1400px) {
     padding: 6rem 10rem;
   }
-`,dk={buttons:{toProjects:{EN:"All my projects",FR:"Tout mes projets"}}};function pk(){const t=gt(o=>o.projectsSlice.projects).filter(o=>o.favorite===!0),n=gt(o=>o.languageSlice.language);return Hc()($s()),j.jsxs("main",{children:[j.jsx(lf,{}),j.jsx(Zx,{}),j.jsx(lk,{}),j.jsxs(fk,{children:[t.map((o,i)=>j.jsx(Vg,{project:o},i)),j.jsx(Fo,{to:"/Projects",children:dk.buttons.toProjects[n]})]}),j.jsx(zc,{})]})}const Eu={pageTitle:{EN:"Projects",FR:"Projets"},filterChoice:{EN:"Choose a technologie as a filter :",FR:"Choisissez une technologie comme filtre :"},resetButton:{EN:"Reset Filters",FR:"Réinitialiser Filtres"}},hk=Q.h1`
+`,dk={buttons:{toProjects:{EN:"All my projects",FR:"Tout mes projets"}}};function pk(){const t=gt(o=>o.projectsSlice.projects).filter(o=>o.favorite===!0),n=gt(o=>o.languageSlice.language);return Hc()($s()),j.jsxs("main",{children:[j.jsx(lf,{}),j.jsx(Zx,{}),j.jsx(lk,{}),j.jsxs(fk,{children:[t.map((o,i)=>j.jsx(Vg,{project:o},i)),j.jsx(Fo,{to:"/portfolio/projects",children:dk.buttons.toProjects[n]})]}),j.jsx(zc,{})]})}const Eu={pageTitle:{EN:"Projects",FR:"Projets"},filterChoice:{EN:"Choose a technologie as a filter :",FR:"Choisissez une technologie comme filtre :"},resetButton:{EN:"Reset Filters",FR:"Réinitialiser Filtres"}},hk=Q.h1`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -676,4 +676,4 @@ Error generating stack: `+i.message+`
         }
     }
     
-`,Ok=A1([{path:"/",element:j.jsx(pk,{})},{path:"/Projects",element:j.jsx(Pk,{})},{path:"/about",element:j.jsx(jk,{})}]);Cu.createRoot(document.getElementById("root")).render(j.jsxs(Iw,{store:DS,children:[j.jsx(O1,{router:Ok}),j.jsx(Nk,{})]}));
+`,Ok=A1([{path:"/portfolio",element:j.jsx(pk,{})},{path:"/portfolio/projects",element:j.jsx(Pk,{})},{path:"/portfolio/about",element:j.jsx(jk,{})}]);Cu.createRoot(document.getElementById("root")).render(j.jsxs(Iw,{store:DS,children:[j.jsx(O1,{router:Ok}),j.jsx(Nk,{})]}));
