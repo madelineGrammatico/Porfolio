@@ -120,8 +120,8 @@ export function Hero() {
           FR: "Développeuse Front-End React"
         },
         heroIntroduction: {
-          EN:"Front-End Developer in transition, my previous experience in the field of art has allowed me to develop a keen sense of creativity and aesthetics. I am determined to expand my Front-End development skills while adding a creative touch to each project.",
-          FR: "Développeuse Front-End en reconversion, mon expérience antérieure dans le domaine de l'art m'a permis de développer un sens aigu de la créativité et de l'esthétique. Je suis déterminée à élargir mes compétences en développement Front-End tout en apportant une touche créative à chaque projet."
+          EN: "What sets me apart is my creativity, adaptability, and constant desire to learn and innovate. I am determined to expand my development skills while bringing a creative touch to each of your projects.",
+          FR: "Ce qui me différencie, ce sont ma créativité, mon adaptabilité et mon désir constant d'apprendre et d'innover. Je suis déterminée à élargir mes compétences en développement tout en apportant une touche créative à chacun de vos projets.",
         },
         heroButton: {
           EN:"Resume",
