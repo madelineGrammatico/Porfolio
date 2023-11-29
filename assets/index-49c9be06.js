@@ -664,7 +664,7 @@ Error generating stack: `+i.message+`
   color: ${N.first};
  
   height: 80vh;
-`;function jk(){const e=gt(n=>n.languageSlice.language),t=()=>{fetch(e==="FR"?"http://localhost:5173/CV_Grammatico_Madeline.pdf":"http://localhost:5173/Resume_Grammatico_Madeline.pdf").then(r=>r.blob()).then(r=>{const o=window.URL.createObjectURL(new Blob([r])),i="CV_Grammatico_Madeline.pdf",l=document.createElement("a");l.href=o,l.setAttribute("download",i),document.body.appendChild(l),l.click(),l.remove()})};return j.jsxs("main",{children:[j.jsx(lf,{}),j.jsx(_k,{children:j.jsx("h1",{children:kp.pageTitle[e]})}),j.jsx($k,{children:j.jsx(Ao,{onClick:()=>t(),children:kp.downloadButton[e]})}),j.jsx(zc,{})]})}const Nk=zx`
+`;function jk(){const e=gt(n=>n.languageSlice.language),t=()=>{fetch(e==="FR"?"https://madelinegrammatico.github.io/portfolio/CV_Grammatico_Madeline.pdf":"https://madelinegrammatico.github.io/portfolio/Resume_Grammatico_Madeline.pdf").then(r=>r.blob()).then(r=>{const o=window.URL.createObjectURL(new Blob([r])),i="CV_Grammatico_Madeline.pdf",l=document.createElement("a");l.href=o,l.setAttribute("download",i),document.body.appendChild(l),l.click(),l.remove()})};return j.jsxs("main",{children:[j.jsx(lf,{}),j.jsx(_k,{children:j.jsx("h1",{children:kp.pageTitle[e]})}),j.jsx($k,{children:j.jsx(Ao,{onClick:()=>t(),children:kp.downloadButton[e]})}),j.jsx(zc,{})]})}const Nk=zx`
     main {
         width: 100vw;
         min-height: 100vh;
