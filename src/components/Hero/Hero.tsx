@@ -5,21 +5,20 @@ import colors from "../../color";
 import { ButtonLink } from "../../components/Button/ButtonLink";
 
 const HeroStyled = styled.section`
-  background-color: ${colors.second};
+  background-color: ${colors.third};
     color: white;
-    min-height: 77vh;
+    background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
     overflow:hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    flex-direction: column;
+    grid-template-rows: auto auto auto;
     justify-content: center;
     align-items: center;
     z-index:2;
   @media screen and (min-width: 1000px) {
-    
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr auto 1fr;
+    min-height: 77vh;
+    grid-template-columns: 2fr 0.2fr 4fr 0.2fr 2fr;
+    grid-template-rows: 3fr 2fr auto auto auto 2fr 3fr;
     flex-direction: row;
     
   }
@@ -28,7 +27,7 @@ const HeroLeft = styled.section`
   height: 100%;
   max-width:100vw;
   width:100%;
-  color: ${colors.first};
+  color: ${colors.white};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,10 +48,10 @@ const HeroLeft = styled.section`
   }
   @media screen and (min-width: 1000px) {
     padding: 0 5rem;
-    grid-column: 1;
-    grid-row: 2;
+    grid-column: 3;
+    grid-row: 3;
     justify-content: space-between;
-    padding: 6rem 2rem 2rem 2rem;
+    padding: 2rem;
     h1 {
       font-size: 3.2rem;
     }
@@ -65,6 +64,7 @@ const HeroRight = styled.div`
   flex-flow: wrap;
   display: flex;
   flex-direction: row;
+  /* background-color: ${colors.second}; */
   /* justify-content: flex-start;
   align-items: start; */
   grid-column: 1;
@@ -84,16 +84,29 @@ const HeroRight = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 3;
+    grid-row: 4;
     gap: 1rem;
-    padding:  0 5rem;
+    padding:  0 2rem;
     height:100%
   }
 
 `
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  grid-row: 3 ;
+  grid-column: 1;
+  padding: 0 2rem;
+
+  @media screen and (min-width: 1000px) {
+    grid-row: 5 ;
+    grid-column: 3;
+  }
+`
 const BackgroundLeft = styled.div`
-  background-color: ${colors.third};
+  /* background-color: ${colors.second}; */
+  background:  linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 90%);
   grid-row: 1 ;
   grid-column: 1;
   /* width: 100%; */
@@ -103,8 +116,8 @@ const BackgroundLeft = styled.div`
   /* content: " "; */
   @media screen and (min-width: 1000px) {
     display:block;
-    grid-row: 1/span 3 ;
-    grid-column: 1;
+    grid-row: 1/span 6;
+    grid-column: 2/span 3;
     
   }
 `
@@ -145,11 +158,13 @@ export function Hero() {
       <BackgroundLeft></BackgroundLeft>
       <HeroRight>
         <p>{ traduction.heroIntroduction[language] }</p>
+      </HeroRight>
+      <LinkContainer>
         <ButtonLink type="primary" to="/portfolio/about">{ traduction.heroButton[language]}</ButtonLink>
         {/* <ButtonLink type="secondary" to='/Projects'>{ traduction.heroSecondButton[language]}</ButtonLink> */}
         <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
         <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">Github</ButtonLink>
-      </HeroRight>
+      </LinkContainer>
     </HeroStyled>
   )
 }
