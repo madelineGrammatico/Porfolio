@@ -23,7 +23,7 @@ const HeroStyled = styled.section`
     
   }
 `
-const HeroLeft = styled.section`
+const HeroTitle = styled.section`
   height: 100%;
   max-width:100vw;
   width:100%;
@@ -60,7 +60,7 @@ const HeroLeft = styled.section`
     }
   }
 `
-const HeroRight = styled.div`
+const HeroProfil = styled.div`
   flex-flow: wrap;
   display: flex;
   flex-direction: row;
@@ -104,7 +104,7 @@ const LinkContainer = styled.div`
     grid-column: 3;
   }
 `
-const BackgroundLeft = styled.div`
+const BackgroundHero = styled.div`
   /* background-color: ${colors.second}; */
   background:  linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 90%);
   grid-row: 1 ;
@@ -150,15 +150,15 @@ export function Hero() {
 
   return (
     <HeroStyled>
-      <HeroLeft>
+      <HeroTitle>
         <h1>Madeline Grammatico</h1>
         <h2>{ traduction.heroJob[language].toUpperCase() }</h2>
         
-      </HeroLeft>
-      <BackgroundLeft></BackgroundLeft>
-      <HeroRight>
+      </HeroTitle>
+      <BackgroundHero></BackgroundHero>
+      <HeroProfil>
         <p>{ traduction.heroIntroduction[language] }</p>
-      </HeroRight>
+      </HeroProfil>
       <LinkContainer>
         <ButtonLink type="primary" to="/portfolio/about">{ traduction.heroButton[language]}</ButtonLink>
         {/* <ButtonLink type="secondary" to='/Projects'>{ traduction.heroSecondButton[language]}</ButtonLink> */}
