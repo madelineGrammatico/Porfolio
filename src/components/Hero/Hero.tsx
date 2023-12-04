@@ -5,13 +5,13 @@ import colors from "../../color";
 import { ButtonLink } from "../../components/Button/ButtonLink";
 
 const HeroStyled = styled.section`
-  background-color: ${colors.third};
+  /* background-color: ${colors.third}; */
     color: white;
     background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
     overflow:hidden;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: 2rem auto auto auto 2rem;
     justify-content: center;
     align-items: center;
     z-index:2;
@@ -33,9 +33,9 @@ const HeroTitle = styled.section`
   justify-content: center;
   align-items: start;
   z-index:4;
-  padding: 3rem 2rem 2rem 2rem;
-  grid-column: 1;
-  grid-row: 1;
+  padding: 2rem;
+  grid-column: 2;
+  grid-row: 2;
   h1{
     margin:0;
     font-size: 2.7rem;
@@ -47,7 +47,6 @@ const HeroTitle = styled.section`
     font-size: 1.2rem;
   }
   @media screen and (min-width: 1000px) {
-    padding: 0 5rem;
     grid-column: 3;
     grid-row: 3;
     justify-content: space-between;
@@ -64,16 +63,10 @@ const HeroProfil = styled.div`
   flex-flow: wrap;
   display: flex;
   flex-direction: row;
-  /* background-color: ${colors.second}; */
-  /* justify-content: flex-start;
-  align-items: start; */
-  grid-column: 1;
-  grid-row: 2;
-  gap: 1rem;
+  grid-column: 2;
+  grid-row: 3;
   padding: 2rem;
   max-width:100vw;
-  /* height:100% */
-  /* width: 60%; */
   p  {
     flex: 1 100%
 
@@ -86,8 +79,7 @@ const HeroProfil = styled.div`
     align-items: flex-end;
     grid-column: 3;
     grid-row: 4;
-    gap: 1rem;
-    padding:  0 2rem;
+    padding: 0 2rem;
     height:100%
   }
 
@@ -95,26 +87,27 @@ const HeroProfil = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
-  grid-row: 3 ;
-  grid-column: 1;
-  padding: 0 2rem;
+  grid-row: 4 ;
+  grid-column: 2;
+  padding: 2rem;
+  gap: 1rem;
 
   @media screen and (min-width: 1000px) {
     grid-row: 5 ;
     grid-column: 3;
+    padding: 2rem 2rem 0 2rem;
   }
 `
 const BackgroundHero = styled.div`
   /* background-color: ${colors.second}; */
-  background:  linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 90%);
-  grid-row: 1 ;
-  grid-column: 1;
-  /* width: 100%; */
+  background:  linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 60%);
+  grid-row: 1/span 3;
+  grid-column: 2;
+  border-radius: 0 0 18px 18px;
   max-width: 100vw; 
   height: 100%;
-  /* z-index:3; */
-  /* content: " "; */
   @media screen and (min-width: 1000px) {
+    display: inherit;
     display:block;
     grid-row: 1/span 6;
     grid-column: 2/span 3;
