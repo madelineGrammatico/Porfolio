@@ -89,7 +89,8 @@ const LinkToProject = styled(Link)`
 
 export function ProjectDefault({project}: { project: ProjectType }) {
     const language = useSelector((state: RootState) => state.languageSlice.language)
-    const link = (project.links.web)? project.links.web : project.links.github
+    // const link = (project.links.web)? project.links.web : project.links.github
+    const link = `/portfolio/projects/${project.id}`
     return(
     <ProjectStyled>
         <LinkToProject to={link} target="_blank">

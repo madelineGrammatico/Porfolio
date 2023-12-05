@@ -12,6 +12,7 @@ import { Home } from './Pages/Home/Home.tsx'
 import { ProjectsPage } from './Pages/Projects/ProjetsPage.tsx'
 import { About } from './Pages/About/About.tsx'
 import GlobalStyle from './components/GlobalStyle/GlobalStyle.tsx'
+import ProjectPage from './Pages/Project/ProjectPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/portfolio/projects",
-    element: <ProjectsPage/>
+    element: <ProjectsPage/>,
+  },
+  {
+    path: "/portfolio/projects/:id",
+    element: <ProjectPage/>
   },
   {
     path: "/portfolio/about",
