@@ -12,6 +12,7 @@ const ProjectsContainer = styled.section`
   gap: 2rem;
   padding: 6rem 2rem ;
   background-color: ${colors.third};
+  flex: 1 100%;
   
   @media screen and (min-width: 600px) {
     grid-template-columns: 1fr ;
