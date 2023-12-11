@@ -1,7 +1,10 @@
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { RootState } from "../../app/store";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import colors from "../../color";
+import { Nav } from "../../components/Nav/Nav";
+import { ButtonLink } from "../../components/Button/ButtonLink";
 
 export default function ProjectPage() {
     const {id} = useParams()
@@ -16,26 +19,56 @@ export default function ProjectPage() {
     project? null : navigate("/portfolio/projects/")
     const linkGithub = project?.links.github
     const linkSite = project?.links.web
-  return (
-        <>
-            <header>{project?.name}</header>
-            <div>{project?.descriptions[language]}</div>
-            {project?.formation && <div>{project?.formation}</div>}
-            <ol>
-                {project?.skills[language].map((skill, index) =>{
-                   return  <li key={"skill" + index}>{skill}</li>
-                })}
-            </ol>
-            <ul>
-                {project?.technos.map((techno, index) => {
-                    return <li key={"techno" + index}>{techno}</li>
-                })}
-            </ul>
-            <div>
-                { linkGithub && <Link to={linkGithub}>Github</Link> }
-                { linkSite && <Link to={linkSite}>Website</Link> }
-            </div>
-        </>
+
+    const ProjectHeader= styled.div`
+        background: linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 80%);
+        padding: 6rem 2rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: ${colors.white}
+    `
+    const ProjectLinks = styled.div`
+        display:flex;
+        flex-direction: row;
+        gap: 2rem;
+    `
+    const ProjectBody = styled.div`
+        background-color: ${colors.third};
+        padding: 2rem;
+        color: ${colors.white};
+        display: flex;
+        flex-direction: column;
+        flex: 1 100%
+    `
+    return (
+        <main>
+            <Nav/>
+            <ProjectHeader>
+                <h1>{ project?.name }</h1>
+                { project?.formation && <p>{ project?.formation }</p> }
+                <ProjectLinks>
+                    { linkSite && <ButtonLink type="primary" to={ linkSite }>Website</ButtonLink> }
+                    { linkGithub && <ButtonLink type="secondary" to={ linkGithub }>Github</ButtonLink> }
+                </ProjectLinks>
+            </ProjectHeader>
+            <ProjectBody>
+                <span>{ project?.descriptions[language] }</span>
+                
+                <ol>
+                    { project?.skills[language].map((skill, index) => {
+                    return  <li key={ "skill" + index }>{skill}</li>
+                    }) }
+                </ol>
+                <ul>
+                    { project?.technos.map((techno, index) => {
+                        return <li key={ "techno" + index }>{techno}</li>
+                    })}
+                </ul>
+            </ProjectBody>
+            
+            
+        </main>
         
   )
 }
