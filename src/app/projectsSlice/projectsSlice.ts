@@ -20,7 +20,7 @@ export type ProjectType = {
         github: string,
         web?: string
     },
-    formation?: "Openclassrooms" | "Le Wagon"
+    formation?: "OpenClassrooms" | "Le Wagon"
 }
 
 export type ProjectsType = {
@@ -90,6 +90,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/P14_RHnet_React"
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "mg-p14-modal",
@@ -121,6 +122,7 @@ const initialState: ProjectsType= {
                 github: "https://github.com/madelineGrammatico/P14_RHnet_React",
                 web: "https://www.npmjs.com/package/mg-p14-modal"
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "ArgentBank",
@@ -153,6 +155,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/P13-argentBank",
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "SportSee",
@@ -185,6 +188,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/SportSee",
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "Kasa",
@@ -214,6 +218,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/kasa",
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "Billed",
@@ -246,6 +251,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/Billed-app-FR-Front",
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "Les Petits Plats",
@@ -279,6 +285,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/Les_Petits_Plats",
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "FishEyes",
@@ -310,6 +317,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/Front-End-Fisheye",
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "GameOn",
@@ -337,6 +345,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/GameOn-website-FR",
             },
+            formation: "OpenClassrooms",
         },
         {
             name: "ohmyfood",
@@ -369,6 +378,7 @@ const initialState: ProjectsType= {
             links: {
                 github: "https://github.com/madelineGrammatico/Grammatico_3_22122021",
             },
+            formation: "OpenClassrooms",
         },
     ]
 }
