@@ -93,7 +93,7 @@ export function ProjectDefault({project}: { project: ProjectType }) {
     const link = `/portfolio/projects/${project.id}`
     return(
     <ProjectStyled>
-        <LinkToProject to={link} target="_blank">
+        <LinkToProject to={link}>
             <ProjectDescription>
                 <header>{ project.name }</header>
                 <p>{ project.descriptions[language]}</p>
