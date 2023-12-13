@@ -55,7 +55,7 @@ export function Home() {
     <main>
       <Nav/>
       <Hero/>
-      <Technos/>
+      <Technos isCallAction={ true }/>
       
       <ProjectsContainer>
         { favorites.map((favorite, index) => {

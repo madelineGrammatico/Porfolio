@@ -5,7 +5,7 @@ import colors from "../../color";
 import { useSelector } from "react-redux";
 import { RootState } from "../../app/store";
 import { ButtonLink } from "../Button/ButtonLink";
-const technosData = [
+const technosDataDefault = [
   "React",
   "TypeScript",
   "Redux Toolkit",
@@ -23,6 +23,10 @@ const traduction = {
   technosIUse: {
     EN: "The technologies I use most often :",
     FR: "Les technologies que j'utilise le plus souvent :"
+  },
+  notOnly: {
+    EN: "but not only...",
+    FR: "Mais pas que..."
   },
   buttonForFilters: {
     EN: "See all technologies",
@@ -73,23 +77,25 @@ const CallToActionWrapper = styled.div`
   padding-top: 1rem
 `
 
-export function Technos() {
+export function Technos({data = technosDataDefault, isCallAction = false}) {
+  console.log("data : ", data)
+  console.log("default : ", technosDataDefault)
   const language = useSelector((state: RootState) => state.languageSlice.language)
   return (
     <Container>
-      <p>{traduction.technosIUse[language]}</p>
+      { isCallAction && <p>{traduction.technosIUse[language]}</p>}
       <TechnosContainer>
-        { technosData.map((techno, index)=>{
+        { data.map((techno, index)=>{
             return <Techno key={"techno"+ index}>
               {techno}
             </Techno>
         })}
-        <p>Mais pas que ...</p>
+        { isCallAction && <p>{traduction.notOnly[language]}</p>}
       </TechnosContainer>
-      <CallToActionWrapper>
+      { isCallAction && <CallToActionWrapper>
         
         <ButtonLink to="/portfolio/projects">{traduction.buttonForFilters[language]}</ButtonLink>
-      </CallToActionWrapper>
+      </CallToActionWrapper>}
       
     </Container>
   )

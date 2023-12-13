@@ -5,6 +5,8 @@ import styled from "styled-components";
 import colors from "../../color";
 import { Nav } from "../../components/Nav/Nav";
 import { ButtonLink } from "../../components/Button/ButtonLink";
+import { Technos } from "../../components/Technos/Technos";
+import { ProjectType } from "../../app/projectsSlice/projectsSlice";
 
 export default function ProjectPage() {
     const {id} = useParams()
@@ -16,7 +18,7 @@ export default function ProjectPage() {
     const project = projects.find((projectItem) => {  
        return projectItem.id === projectId
     })
-    project? null : navigate("/portfolio/projects/")
+    project? project as unknown as ProjectType : navigate("/portfolio/projects/")
     const linkGithub = project?.links.github
     const linkSite = project?.links.web
 
@@ -52,19 +54,14 @@ export default function ProjectPage() {
                     { linkGithub && <ButtonLink type="secondary" to={ linkGithub }>Github</ButtonLink> }
                 </ProjectLinks>
             </ProjectHeader>
+            <Technos data={ project?.technos }/>
             <ProjectBody>
                 <span>{ project?.descriptions[language] }</span>
-                
                 <ol>
                     { project?.skills[language].map((skill, index) => {
                     return  <li key={ "skill" + index }>{skill}</li>
                     }) }
                 </ol>
-                <ul>
-                    { project?.technos.map((techno, index) => {
-                        return <li key={ "techno" + index }>{techno}</li>
-                    })}
-                </ul>
             </ProjectBody>
             
             
