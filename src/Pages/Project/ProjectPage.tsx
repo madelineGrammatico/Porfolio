@@ -22,13 +22,38 @@ export default function ProjectPage() {
     const linkGithub = project?.links.github
     const linkSite = project?.links.web
 
+    const HeroStyled = styled.section`
+        /* background-color: ${colors.third}; */
+        color: white;
+        background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
+        overflow:hidden;
+        display: grid;
+        grid-template-columns: 2rem 1fr 2rem;
+        grid-template-rows: 2rem auto 2rem;
+        justify-content: center;
+        align-items: center;
+        z-index:2;
+        @media screen and (min-width: 1000px) {
+            grid-template-columns: 10rem 4fr 10rem;
+            grid-template-rows: 3fr auto 2rem;
+            flex-direction: row;
+  }
+`
     const ProjectHeader= styled.div`
         background: linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 80%);
         padding: 6rem 2rem 2rem 2rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        color: ${colors.white}
+        color: ${colors.white};
+        grid-column: 2;
+        grid-row: 1/span 2;
+        height: 100%;
+        border-radius: 0 0 18px 18px;
+        @media screen and (min-width: 1000px) {
+            grid-column: 2;
+            grid-row: 1/span 2;
+        }
     `
     const ProjectLinks = styled.div`
         display:flex;
@@ -36,8 +61,8 @@ export default function ProjectPage() {
         gap: 2rem;
     `
     const ProjectBody = styled.div`
-        background-color: ${colors.third};
-        padding: 2rem;
+        background-color: ${colors.second};
+        padding: 2rem 12rem;
         color: ${colors.white};
         display: flex;
         flex-direction: column;
@@ -46,14 +71,17 @@ export default function ProjectPage() {
     return (
         <main>
             <Nav/>
-            <ProjectHeader>
-                <h1>{ project?.name }</h1>
-                { project?.formation && <p>{ project?.formation }</p> }
-                <ProjectLinks>
-                    { linkSite && <ButtonLink type="primary" to={ linkSite }>Website</ButtonLink> }
-                    { linkGithub && <ButtonLink type="secondary" to={ linkGithub }>Github</ButtonLink> }
-                </ProjectLinks>
-            </ProjectHeader>
+            <HeroStyled>
+                <ProjectHeader>
+                    <h1>{ project?.name }</h1>
+                    { project?.formation && <p>{ project?.formation }</p> }
+                    <ProjectLinks>
+                        { linkSite && <ButtonLink type="primary" to={ linkSite }>Website</ButtonLink> }
+                        { linkGithub && <ButtonLink type="secondary" to={ linkGithub }>Github</ButtonLink> }
+                    </ProjectLinks>
+                </ProjectHeader>
+            </HeroStyled>
+            
             <Technos data={ project?.technos }/>
             <ProjectBody>
                 <span>{ project?.descriptions[language] }</span>
