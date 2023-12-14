@@ -11,6 +11,8 @@ const ProjectsContainer = styled.section`
   grid-template-columns: 1fr;
   gap: 2rem;
   padding: 6rem 2rem ;
+  justify-content: flex-start;
+  align-content: flex-start;
   background-color: ${colors.third};
   flex: 1 100%;
   

@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 
 const ProjectStyled = styled.article`
     border-radius: 18px;
-    border: 3px solid ${colors.white};
+    border: 4px solid ${colors.white};
     cursor: pointer;
     overflow: hidden;
 
     &:hover {
-    color: ${colors.fourth};
+        border: 4px solid ${colors.fourth};
     box-shadow: 0 0 15px rgb(50, 50, 50);
-    div {
+    header {
         color: ${colors.fourth};
     }
     }
@@ -72,12 +72,8 @@ const LinkToProject = styled(Link)`
     overflow: hidden;
     height: 100%;
     &:hover {
-        color: ${colors.fourth};
-        box-shadow: 0 0 15px rgb(50, 50, 50);
-        div {
-            color: ${colors.fourth};
-        }
-
+        
+        
     }
     @media screen and (min-width: 500px) {
         display: grid;

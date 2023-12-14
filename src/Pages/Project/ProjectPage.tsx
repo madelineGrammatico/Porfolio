@@ -23,7 +23,6 @@ export default function ProjectPage() {
     const linkSite = project?.links.web
 
     const HeroStyled = styled.section`
-        /* background-color: ${colors.third}; */
         color: white;
         background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
         overflow:hidden;
@@ -37,8 +36,8 @@ export default function ProjectPage() {
             grid-template-columns: 10rem 4fr 10rem;
             grid-template-rows: 3fr auto 2rem;
             flex-direction: row;
-  }
-`
+        }
+    `
     const ProjectHeader= styled.div`
         background: linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 80%);
         padding: 6rem 2rem 2rem 2rem;

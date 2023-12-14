@@ -10,10 +10,12 @@ const ProjectStyled = styled.article`
     border-radius: 18px;
     cursor: pointer;
     overflow: hidden;
+    border: solid 4px transparent;
     &:hover {
-        color: ${colors.fourth};
+        border: solid 4px ${colors.fourth};
+        /* color: ${colors.fourth}; */
         box-shadow: 0 0 15px rgb(50, 50, 50);
-        div {
+        header {
             color: ${colors.fourth};
         }
     }
@@ -70,14 +72,6 @@ const LinkToProject = styled(Link)`
     color: ${colors.white};
     overflow: hidden;
     height: 100%;
-    &:hover {
-        color: ${colors.fourth};
-        box-shadow: 0 0 15px rgb(50, 50, 50);
-        div {
-            color: ${colors.fourth};
-        }
-
-    }
     @media screen and (min-width: 500px) {
         display: grid;
         grid-template-columns: 3fr 1.2fr;

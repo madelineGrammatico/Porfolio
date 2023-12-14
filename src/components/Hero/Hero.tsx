@@ -82,7 +82,6 @@ const HeroProfil = styled.div`
     padding: 0 2rem;
     height:100%
   }
-
 `
 const LinkContainer = styled.div`
   display: flex;
@@ -99,7 +98,6 @@ const LinkContainer = styled.div`
   }
 `
 const BackgroundHero = styled.div`
-  /* background-color: ${colors.second}; */
   background:  linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 60%);
   grid-row: 1/span 3;
   grid-column: 2;
@@ -154,7 +152,6 @@ export function Hero() {
       </HeroProfil>
       <LinkContainer>
         <ButtonLink type="primary" to="/portfolio/about">{ traduction.heroButton[language]}</ButtonLink>
-        {/* <ButtonLink type="secondary" to='/Projects'>{ traduction.heroSecondButton[language]}</ButtonLink> */}
         <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
         <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">Github</ButtonLink>
       </LinkContainer>
