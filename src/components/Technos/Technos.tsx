@@ -39,12 +39,15 @@ const Container= styled.section`
   flex-flow: column;
   justify-content: flex-start;
   align-items: start;
-  padding: 2rem;
+  padding: 2rem 1rem;
   /* gap: 1rem; */
   background-color: ${colors.white};
   color: ${colors.second};
   font-weight: 900;
 
+  @media screen and (min-width: 400px){
+    padding: 2rem;
+  }
   @media screen and (min-width: 1000px){
   padding: 4rem 6rem;
   /* gap: 1rem; */
@@ -59,9 +62,17 @@ const TechnosContainer = styled.section`
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 100%;
   /* padding: 0 1.7rem; */
+  @media screen and (min-width: 400px){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
   @media screen and (min-width: 1000px){
     gap: 1rem 1.3rem;
     padding:  0.8rem 4rem;
