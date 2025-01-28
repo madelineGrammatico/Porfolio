@@ -7,6 +7,7 @@ import { Nav } from "../../components/Nav/Nav";
 import { ButtonLink } from "../../components/Button/ButtonLink";
 import { Technos } from "../../components/Technos/Technos";
 import { ProjectType } from "../../app/projectsSlice/projectsSlice";
+import { theme } from "../../theme/theme";
 
 export default function ProjectPage() {
     const {id} = useParams()
@@ -22,58 +23,16 @@ export default function ProjectPage() {
     const linkGithub = project?.links.github
     const linkSite = project?.links.web
 
-    const HeroStyled = styled.section`
-        color: white;
-        background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
-        overflow:hidden;
-        display: grid;
-        grid-template-columns: 2rem 1fr 2rem;
-        grid-template-rows: 2rem auto 2rem;
-        justify-content: center;
-        align-items: center;
-        z-index:2;
-        @media screen and (min-width: 1000px) {
-            grid-template-columns: 10rem 4fr 10rem;
-            grid-template-rows: 3fr auto 2rem;
-            flex-direction: row;
-        }
-    `
-    const ProjectHeader= styled.div`
-        background: linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 80%);
-        padding: 6rem 2rem 2rem 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        color: ${colors.white};
-        grid-column: 2;
-        grid-row: 1/span 2;
-        height: 100%;
-        border-radius: 0 0 18px 18px;
-        @media screen and (min-width: 1000px) {
-            grid-column: 2;
-            grid-row: 1/span 2;
-        }
-    `
-    const ProjectLinks = styled.div`
-        display:flex;
-        flex-direction: row;
-        gap: 2rem;
-    `
-    const ProjectBody = styled.div`
-        background-color: ${colors.second};
-        padding: 2rem 12rem;
-        color: ${colors.white};
-        display: flex;
-        flex-direction: column;
-        flex: 1 100%
-    `
+    
     return (
         <main>
             <Nav/>
             <HeroStyled>
                 <ProjectHeader>
-                    <h1>{ project?.name }</h1>
-                    { project?.formation && <p>{ project?.formation }</p> }
+                    <div>
+                        <h1>{ project?.name }</h1>
+                        { project?.formation && <p>{ project?.formation }</p> }
+                    </div>
                     <ProjectLinks>
                         { linkSite && <ButtonLink type="primary" to={ linkSite }>Website</ButtonLink> }
                         { linkGithub && <ButtonLink type="secondary" to={ linkGithub }>Github</ButtonLink> }
@@ -91,8 +50,79 @@ export default function ProjectPage() {
                 </ol>
             </ProjectBody>
             
-            
         </main>
         
   )
 }
+const HeroStyled = styled.section`
+        color: white;
+        background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
+        overflow:hidden;
+        display: grid;
+        grid-template-columns: 1rem 1fr 1rem;
+        grid-template-rows: 2rem auto 2rem;
+        justify-content: center;
+        align-items: center;
+        z-index:2;
+        
+        @media screen and (min-width: 400px) {
+            grid-template-columns: 2rem 1fr 2rem;
+            grid-template-rows: 2rem auto 2rem;
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: 1000px) {
+            grid-template-columns: 10rem 4fr 10rem;
+            grid-template-rows: 3fr auto 2rem;
+            flex-direction: row;
+        }
+    `
+    const ProjectHeader= styled.div`
+        background: linear-gradient(180deg, ${colors.first} 2%, ${colors.second} 80%);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: ${colors.white};
+        grid-column: 2;
+        grid-row: 1/span 2;
+        height: 100%;
+        border-radius: 0 0 18px 18px;
+
+        p{
+            margin: 10px 0 0 0;
+        }
+
+        @media screen and (min-width: ${theme.mediaSize.XXS}) {
+            padding: 6rem 2rem 2rem 2rem;
+        }
+        @media screen and (min-width: 1000px) {
+            gap: 2rem;
+            padding: 6rem 2rem 2rem 2rem;
+            grid-column: 2;
+            grid-row: 1/span 2;
+        }
+    `
+    const ProjectLinks = styled.div`
+        display:flex;
+        flex-direction: row;
+        gap: 2rem;
+    `
+    const ProjectBody = styled.div`
+        background-color: ${colors.second};
+        padding: 2rem 2rem 4rem 2rem;
+        color: ${colors.white};
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        flex: 1 100%;
+        ol{
+            font-weight: 400;        }
+
+        @media screen and (min-width: ${theme.mediaSize.XS}) {
+            padding: 2rem 6rem;
+        }
+        @media screen and (min-width: ${theme.mediaSize.L}) {
+            padding: 2rem 12rem;
+        }
+    `
