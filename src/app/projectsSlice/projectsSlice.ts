@@ -60,7 +60,7 @@ const initialState: ProjectsType= {
             },
         },
         {
-            name: "P14_RHnet_React",
+            name: "RHnet",
             id: 9,
             favorite: true,
             technos: [
