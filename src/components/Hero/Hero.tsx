@@ -3,6 +3,7 @@ import { RootState } from "../../app/store";
 import styled from "styled-components"
 import colors from "../../color";
 import { ButtonLink } from "../../components/Button/ButtonLink";
+import { theme } from "../../theme/theme";
 
 const HeroStyled = styled.section`
   /* background-color: ${colors.third}; */
@@ -10,11 +11,12 @@ const HeroStyled = styled.section`
     background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
     overflow:hidden;
     display: grid;
-    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: 2rem auto auto auto 2rem;
     justify-content: center;
     align-items: center;
     z-index:2;
+
   @media screen and (min-width: 1000px) {
     min-height: 77vh;
     grid-template-columns: 2fr 0.2fr 4fr 0.2fr 2fr;
@@ -25,7 +27,6 @@ const HeroStyled = styled.section`
 `
 const HeroTitle = styled.section`
   height: 100%;
-  max-width:100vw;
   width:100%;
   color: ${colors.white};
   display: flex;
@@ -33,7 +34,7 @@ const HeroTitle = styled.section`
   justify-content: center;
   align-items: start;
   z-index:4;
-  padding: 2rem;
+  padding: 1rem;
   grid-column: 2;
   grid-row: 2;
   h1{
@@ -45,6 +46,9 @@ const HeroTitle = styled.section`
     margin:0;
     padding: 0;
     font-size: 1.2rem;
+  }
+  @media screen and (min-width: 1000px) {
+    padding: 2rem;
   }
   @media screen and (min-width: 1000px) {
     grid-column: 3;
@@ -65,7 +69,7 @@ const HeroProfil = styled.div`
   flex-direction: row;
   grid-column: 2;
   grid-row: 3;
-  padding: 2rem;
+  padding: 1rem;
   max-width:100vw;
   p  {
     flex: 1 100%
@@ -86,11 +90,25 @@ const HeroProfil = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   grid-row: 4 ;
   grid-column: 2;
-  padding: 2rem;
+  padding: 1rem;
   gap: 1rem;
+  .buttonsSecondary{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  @media screen and (min-width: ${theme.mediaSize.XS}) {
+    flex-wrap: nowrap;
+    padding: 2rem;
 
+    .buttonsSecondary {
+    flex-wrap: nowrap;
+    }
+  }
   @media screen and (min-width: 1000px) {
     grid-row: 5 ;
     grid-column: 3;
@@ -152,8 +170,10 @@ export function Hero() {
       </HeroProfil>
       <LinkContainer>
         <ButtonLink type="primary" to="/portfolio/about">{ traduction.heroButton[language]}</ButtonLink>
-        <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
-        <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">Github</ButtonLink>
+        <div className="buttonsSecondary">
+          <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
+          <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">Github</ButtonLink>
+        </div>
       </LinkContainer>
     </HeroStyled>
   )

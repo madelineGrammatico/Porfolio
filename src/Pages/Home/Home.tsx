@@ -14,12 +14,12 @@ const ProjectsContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 6rem 2rem;
+  padding: 2rem;
   background-color: ${colors.third};
 
   @media screen and (min-width: 600px) {
     grid-template-columns: 1fr ;
-    padding: 6rem;
+    padding: 2rem 6rem;
   }
   @media screen and (min-width: 900px) {
     grid-template-columns: 1fr;
