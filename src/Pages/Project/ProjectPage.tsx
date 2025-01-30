@@ -31,6 +31,7 @@ export default function ProjectPage() {
                 <ProjectHeader>
                     <div>
                         <h1>{ project?.name }</h1>
+                        <h2>{ project?.descriptions[language] }</h2>
                         { project?.formation && <p>{ project?.formation }</p> }
                     </div>
                     <ProjectLinks>
@@ -42,10 +43,17 @@ export default function ProjectPage() {
             
             <Technos data={ project?.technos }/>
             <ProjectBody>
-                <span>{ project?.descriptions[language] }</span>
-                <ol>
-                    { project?.skills[language].map((skill, index) => {
-                    return  <li key={ "skill" + index }>{skill}</li>
+                
+                <ol className="skill-contain">
+                    { project?.skills[language].map((skill: {skill: string, desc: string}, index) => {
+                    return  (
+                        <li>
+                            <article key={ "skill" + index }>
+                                <h3>{skill.skill}</h3>
+                                <p>{skill.desc}</p>
+                            </article>
+                        </li>
+                    )
                     }) }
                 </ol>
             </ProjectBody>
@@ -88,7 +96,9 @@ const HeroStyled = styled.section`
         grid-row: 1/span 2;
         height: 100%;
         border-radius: 0 0 18px 18px;
-
+        h2 {
+            font-size: 1.2rem
+        }
         p{
             margin: 10px 0 0 0;
         }
@@ -96,11 +106,20 @@ const HeroStyled = styled.section`
         @media screen and (min-width: ${theme.mediaSize.XXS}) {
             padding: 6rem 2rem 2rem 2rem;
         }
+
+        @media screen and (min-width: 700px) {
+            padding: 7rem 2rem 2rem 2rem;
+        }
+
         @media screen and (min-width: 1000px) {
             gap: 2rem;
-            padding: 6rem 2rem 2rem 2rem;
+            padding: 8rem 2rem 2rem 2rem;
             grid-column: 2;
             grid-row: 1/span 2;
+
+            h2 {
+                font-size: 1.5rem
+            }
         }
     `
     const ProjectLinks = styled.div`
@@ -116,8 +135,21 @@ const HeroStyled = styled.section`
         display: flex;
         flex-direction: column;
         flex: 1 100%;
-        ol{
-            font-weight: 400;        }
+
+        .skill-contain{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            li article {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0.5rem;
+                p{
+                    font-weight: 400
+                }
+            }
+        }
 
         @media screen and (min-width: ${theme.mediaSize.XS}) {
             padding: 2rem 6rem;
