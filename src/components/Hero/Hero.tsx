@@ -11,14 +11,27 @@ const HeroStyled = styled.section`
     background:  linear-gradient(180deg, ${colors.first} 0%, ${colors.third} 70%);
     overflow:hidden;
     display: grid;
-    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-columns: 0.8rem 1fr 0.8rem;
     grid-template-rows: 2rem auto auto auto 2rem;
     justify-content: center;
     align-items: center;
     z-index:2;
 
+    @media screen and (min-width: 400px) {
+      grid-template-columns: 2rem 1fr 2rem;
+    }
+    @media screen and (min-width: 600px) {
+      grid-template-columns: 2rem 1fr 2rem;
+      grid-template-rows: 4rem auto auto auto 2rem;
+    }
+    @media screen and (min-width: 700px) {
+      grid-template-rows: 5rem auto auto auto 2rem;
+    }
+    @media screen and (min-width: 800px) {
+      grid-template-rows: 6rem auto auto auto 2rem;
+    }
   @media screen and (min-width: 1000px) {
-    min-height: 77vh;
+    min-height: 60vh;
     grid-template-columns: 2fr 0.2fr 4fr 0.2fr 2fr;
     grid-template-rows: 3fr 2fr auto auto auto 2fr 3fr;
     flex-direction: row;
@@ -34,20 +47,35 @@ const HeroTitle = styled.section`
   justify-content: center;
   align-items: start;
   z-index:4;
+  gap: 0.8rem;
   padding: 1rem;
   grid-column: 2;
   grid-row: 2;
+  overflow:hidden;
+  
   h1{
     margin:0;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     font-weight: 900;
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis
   }
   h2 {
     margin:0;
     padding: 0;
     font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 400px) {
+    padding: 2rem;
+
+    h1{
+    font-size: 2.7rem;
+  }
+  }
+  @media screen and (min-width: 600px) {
     padding: 2rem;
   }
   @media screen and (min-width: 1000px) {
@@ -69,11 +97,21 @@ const HeroProfil = styled.div`
   flex-direction: row;
   grid-column: 2;
   grid-row: 3;
-  padding: 1rem;
-  max-width:100vw;
+  padding: 1rem  1rem  2rem 1rem ;
+  /* max-width:100vw; */
+  width: 100%;
+  
   p  {
-    flex: 1 100%
-
+    flex: 1 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  @media screen and (min-width: 400px) {
+    padding:  0 2rem 2rem 2rem;
+  }
+  @media screen and (min-width: 600px) {
+    padding: 0 2rem 2rem 2rem;
   }
   @media screen and (min-width: 1000px) {
     flex-flow: wrap;
@@ -91,22 +129,44 @@ const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   grid-row: 4 ;
   grid-column: 2;
-  padding: 1rem;
+  padding: 2rem 0rem 0 0rem;
   gap: 1rem;
   .buttonsSecondary{
     display: flex;
+    width:100%;
     flex-direction: row;
+    align-items: start;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    
+  }
+  @media screen and (min-width: ${theme.mediaSize.XXS}) {
+    padding: 2rem 2rem 0 2rem;
+    gap: 2rem
+
+    button {
+      height:fit-content;
+    }
+    .buttonsSecondary {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 1rem;
+      width: inherit;
+    }
   }
   @media screen and (min-width: ${theme.mediaSize.XS}) {
+    flex-direction: row;
+    justify-content: start;
     flex-wrap: nowrap;
+
     padding: 2rem;
 
     .buttonsSecondary {
-    flex-wrap: nowrap;
+      flex-direction: row;
+      flex-wrap: nowrap;
     }
   }
   @media screen and (min-width: 1000px) {
