@@ -47,8 +47,8 @@ export function About() {
 
   const downloadResume = ()=> {
     const url = language === "FR" ? 
-      "https://madelinegrammatico.github.io/portfolio/CV_Grammatico_Madeline.pdf"
-    : "https://madelinegrammatico.github.io/portfolio/Resume_Grammatico_Madeline.pdf"
+      "https://madelinegrammatico.github.io/portfolio/CV_dev_Frontend_Grammatico_Madeline.pdf"
+    : "https://madelinegrammatico.github.io/portfolio/CV_EN_dev_Frontend_Grammatico_Madeline.pdf"
     fetch(url)
       .then((response) => response.blob())
       .then((blob) => {
