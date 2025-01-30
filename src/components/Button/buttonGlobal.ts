@@ -10,6 +10,7 @@ const buttonBasic = `
     border-radius: 8px;
     box-sizing: border-box;
     width: fit-content;
+    height: fit-content;
     &:hover {
         background-color: ${colors.third};
         color: ${colors.fourth};
