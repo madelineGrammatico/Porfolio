@@ -229,11 +229,9 @@ export function Hero() {
         <p>{ traduction.heroIntroduction[language] }</p>
       </HeroProfil>
       <LinkContainer>
-        <ButtonLink type="primary" to="/portfolio/about">{ traduction.heroButton[language]}</ButtonLink>
-        <div className="buttonsSecondary">
-          <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
-          <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">Github</ButtonLink>
-        </div>
+        <ButtonLink type="primary" to="/about">{ traduction.heroButton[language]}</ButtonLink>
+        <ButtonLink type="outSite" to="https://www.linkedin.com/in/madeline-grammatico-06012015a/">Linkedin</ButtonLink>
+        <ButtonLink type="outSite" to="https://github.com/madelineGrammatico">Github</ButtonLink>
       </LinkContainer>
     </HeroStyled>
   )

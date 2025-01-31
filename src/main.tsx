@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 import { 
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
@@ -14,21 +14,21 @@ import { About } from './Pages/About/About.tsx'
 import GlobalStyle from './components/GlobalStyle/GlobalStyle.tsx'
 import ProjectPage from './Pages/Project/ProjectPage.tsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/portfolio",
+    path: "/",
     element: <Home/>,
   },
   {
-    path: "/portfolio/projects",
+    path: "/projects",
     element: <ProjectsPage/>,
   },
   {
-    path: "/portfolio/projects/:id",
+    path: "/projects/:id",
     element: <ProjectPage/>
   },
   {
-    path: "/portfolio/about",
+    path: "/about",
     element: <About/>
   }
 ])

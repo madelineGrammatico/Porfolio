@@ -61,7 +61,7 @@ export function Home() {
         { favorites.map((favorite, index) => {
           return <ProjectFav project={ favorite } key={ index }/>
         }) }
-        <ButtonLink to="/portfolio/projects">{traduction.buttons.toProjects[language]}</ButtonLink>
+        <ButtonLink to="/projects">{traduction.buttons.toProjects[language]}</ButtonLink>
       </ProjectsContainer>
       <ScrollRestoration/>
     </main>
