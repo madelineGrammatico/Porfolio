@@ -45,6 +45,11 @@ const ButtonFilter = styled.button`
         background-color: ${colors.white};
         border: 6px solid ${colors.fourth};
     }
+    &:focus{
+        color: ${colors.white};
+        background-color: ${colors.fourth};
+        border:  6px solid ${colors.fourth};
+    }
 `
 const ButtonSmall = styled.button`
     ${buttonGlobal};

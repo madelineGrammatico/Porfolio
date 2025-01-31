@@ -8,7 +8,7 @@ export const ButtonLinkPrimary = styled(Link)`
     ${buttonGlobal};
     border: 6px solid ${colors.fourth};
     background-color: ${colors.fourth};
-    
+
     &:hover {
         border: 6px solid ${colors.fourth};
         background-color: transparent;
@@ -16,10 +16,10 @@ export const ButtonLinkPrimary = styled(Link)`
 `
 const ButtonLinkSecondary = styled(Link)`
     ${buttonGlobal};
-    border: 3px solid ${colors.first};
+    border: 6px solid ${colors.first};
     background-color: ${colors.first};
     &:hover {
-        border: 3px solid ${colors.third};
+        border: 6px solid ${colors.third};
         background-color: ${colors.third};
         color: ${colors.fourth};
     }

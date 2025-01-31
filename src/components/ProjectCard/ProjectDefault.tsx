@@ -94,8 +94,8 @@ export function ProjectDefault({project}: { project: ProjectType }) {
                 <header>{ project.name }</header>
                 <p>{ project.descriptions[language]}</p>
                 <ol>
-                    { project.skills[language].map((skill: string, index: number)=> {
-                        return <li key={ project.id + "skill" + index }>{ skill }</li>
+                    { project.skills[language].map((skill:  {skill: string, desc: string}, index: number)=> {
+                        return <li key={ project.id + "skill" + index }>{ skill.skill }</li>
                     })}
                 </ol>
             </ProjectDescription>
