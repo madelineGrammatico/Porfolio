@@ -501,7 +501,7 @@ Error generating stack: `+o.message+`
   align-items: center;
   align-self: center;
   padding-top: 1rem
-`;function Qg({data:e=Ep,isCallAction:t=!1}){console.log("data : ",e),console.log("default : ",Ep);const n=nt(r=>r.languageSlice.language);return R.jsxs(ak,{children:[t&&R.jsx("p",{children:Rs.technosIUse[n]}),R.jsxs(sk,{children:[e.map((r,i)=>R.jsx(lk,{children:r},"techno"+i)),t&&R.jsx("p",{children:Rs.notOnly[n]})]}),t&&R.jsx(uk,{children:R.jsx(Zn,{to:"/portfolio/projects",children:Rs.buttonForFilters[n]})})]})}const ck=V.article`
+`;function Qg({data:e=Ep,isCallAction:t=!1}){console.log("data : ",e),console.log("default : ",Ep);const n=nt(r=>r.languageSlice.language);return R.jsxs(ak,{children:[t&&R.jsx("p",{children:Rs.technosIUse[n]}),R.jsxs(sk,{children:[e.map((r,i)=>R.jsx(lk,{children:r},"techno"+i)),t&&R.jsx("p",{children:Rs.notOnly[n]})]}),t&&R.jsx(uk,{children:R.jsx(Zn,{to:"/projects",children:Rs.buttonForFilters[n]})})]})}const ck=V.article`
     border-radius: 18px;
     cursor: pointer;
     overflow: hidden;
