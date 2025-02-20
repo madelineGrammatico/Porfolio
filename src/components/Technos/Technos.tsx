@@ -105,7 +105,7 @@ export function Technos({data = technosDataDefault, isCallAction = false}) {
       </TechnosContainer>
       { isCallAction && <CallToActionWrapper>
         
-        <ButtonLink to="/portfolio/projects">{traduction.buttonForFilters[language]}</ButtonLink>
+        <ButtonLink to="/projects">{traduction.buttonForFilters[language]}</ButtonLink>
       </CallToActionWrapper>}
       
     </Container>
