@@ -156,7 +156,7 @@ const initialState: ProjectsType= {
                 "Vite",
                 "Vercel",
                 "FireBase",
-                "Styled Composant",
+                "Styled Components",
                 "React-transition-group",
             ],
             descriptions: {
@@ -207,7 +207,7 @@ const initialState: ProjectsType= {
                 "Vite",
                 "Vercel",
                 "FireBase",
-                "Styled Composant",
+                "Styled Components",
                 "React-transition-group",
             ],
             descriptions: {
